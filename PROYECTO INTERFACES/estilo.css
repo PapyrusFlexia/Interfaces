@@ -1,0 +1,466 @@
+/*-- Basico ----------------------------------------------------------*/
+
+ul,
+ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1,
+h2,
+h3,
+p,
+form {
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+img {
+	border: none;
+}
+/*-- Layout ----------------------------------------------------------*/
+
+#contenedor {
+	width: 90%;
+	max-width: 900px;
+	width: expression(document.body.clientWidth > 901?"900px": "auto");
+	margin: 0 auto;
+}
+#cabecera,
+#menu,
+#lateral,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {} #cabecera {
+	clear: both;
+}
+#menu {
+	clear: both;
+}
+#lateral {
+	display: grid;
+	float: left;
+	margin-left: -10%;
+	width: 30%;
+}
+#contenido {
+	float: right;
+	width: 78%;
+}
+#contenido #principal {
+	float: left;
+	width: 78%;
+}
+#contenido #secundario {
+	float: right;
+	width: 20%;
+}
+#pie {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	length: 100px;
+	clear: both;
+}
+/*-- Cabecera --------------------------------------------------------*/
+
+#cabecera #logo {
+	float: left;
+}
+#imglogoungo {
+	opacity: 0;
+	width: 28%;
+	height: 15%;
+	margin-left: -84%;
+	z-index: 1;
+	opacity: 100;
+}
+#imglogo {
+	opacity: 0;
+	width: 30%;
+	height: 30%;
+	float: left;
+	object-fit: cover;
+	z-index: 2;
+	transition: 2.5s;
+}
+#imglogo:hover {
+	opacity: 100;
+	background: url("ungoloz.png");
+	-o-transform: rotate(720deg);
+	-ms-transform: rotate(720deg);
+	-moz-transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+	transform: rotate(720deg);
+}
+#header {
+	margin-top: 10%;
+	margin-left: 5%;
+	float: left;
+}
+#cabecera #buscador {
+	float: right;
+}
+/*-- Menu ------------------------------------------------------------*/
+
+#menu #menu_principal {
+	display: inline;
+	float: left;
+}
+#historia:link #herramientas:link #login:link {
+	color: blue;
+}
+#historia:visited #herramientas:visited #login:visited {
+	color: purple;
+}
+#historia:hover #herramientas:hover #login:hover {
+	color: red;
+}
+#historia:active #herramientas:active #login:active {
+	color: yellow;
+}
+#menu {}
+/* He usado translate aqui porque queria desplazar el menú un poco hacia arriba, mase cerca del logo */
+
+/*-- Seccion Principal -----------------------------------------------*/
+
+#contenido #principal .articulo img {
+	width: 100px;
+	float: left;
+}
+/*-- Pie de pagina ---------------------------------------------------*/
+
+#pie .enlaces {
+	float: left;
+}
+#pie .copyright {
+	float: right;
+}
+/* === IMPORTANTE ============================
+    A partir de aqui incluye tu css
+============================================= */
+
+#cabecera,
+#menu,
+#lateral,
+#lateral #noticias,
+#lateral #publicidad,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+	padding: .5em;
+}
+#lateral {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+#cabecera {
+	padding: 1em;
+	background-image: linear-gradient(red, orange);
+	display: grid;
+}
+#menu {
+	margin-bottom: .5em;
+	border-bottom: 1px solid white;
+}
+#contenido {
+	width: 77%;
+	padding: 0;
+}
+#contenido #principal {
+	width: 73%;
+}
+#pie {
+	padding: .5em 0;
+	margin-top: 1em;
+	border-top: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5
+}
+#contenido #principal .articulo {
+	margin-bottom: 1em;
+	display: grid;
+}
+#contenido #principal .articulo img {
+	margin: .5em;
+}
+#lateral #publicidad {
+	margin-top: 1em;
+}
+#noticias {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #C5C5C5;
+	text-align: center;
+}
+#publicidad {
+	border: 1px dashed #CC6600;
+	text-align: center;
+}
+#imgpubli {
+	width: 260px;
+	height: 200px;
+	object-fit: cover;
+}
+#principal {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+#secundario {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #CC6600;
+	text-align: left;
+}
+#buscador {
+	margin-left: 70%;
+}
+input[type=text],
+input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+/* Set a style for all buttons */
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+button:hover {
+	opacity: 0.8;
+}
+.buttonindex {
+	display: inline-block;
+	transform: translateY(-25px);
+}
+/*#herrabutton{
+  float: left; 
+  margin-left: 80%;  
+  width:80px;
+}*/
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+/* Center the image and position the close button */
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+.container {
+	padding: 16px;
+}
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+/* The Modal (background) */
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+	padding-top: 60px;
+}
+/* Modal Content/Box */
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%;
+	/* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: red;
+	cursor: pointer;
+}
+/* Add Zoom Animation */
+
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+	from {
+		-webkit-transform: scale(0)
+	}
+	to {
+		-webkit-transform: scale(1)
+	}
+}
+@keyframes animatezoom {
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(1)
+	}
+}
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+@keyframes spincube {
+	from, to {
+		width: 180px;
+		height: 150px;
+		text-align: center;
+		-moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+		-ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	16% {
+		-moz-transform: rotateY(-90deg);
+		-ms-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+	}
+	33% {
+		-moz-transform: rotateY(-90deg) rotateZ(90deg);
+		-ms-transform: rotateY(-90deg) rotateZ(90deg);
+		transform: rotateY(-90deg) rotateZ(90deg);
+	}
+	50% {
+		-moz-transform: rotateY(-180deg) rotateZ(90deg);
+		-ms-transform: rotateY(-180deg) rotateZ(90deg);
+		transform: rotateY(-180deg) rotateZ(90deg);
+	}
+	66% {
+		-moz-transform: rotateY(-270deg) rotateX(90deg);
+		-ms-transform: rotateY(-270deg) rotateX(90deg);
+		transform: rotateY(-270deg) rotateX(90deg);
+	}
+	83% {
+		-moz-transform: rotateX(90deg);
+		-ms-transform: rotateX(90deg);
+		transform: rotateX(90deg);
+	}
+}
+.cubespinner {
+	-webkit-animation-name: spincube;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 12s;
+	animation-name: spincube;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 12s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 30px 30px 0;
+	-moz-transform-origin: 30px 30px 0;
+	-ms-transform-origin: 30px 30px 0;
+	transform-origin: 30px 30px 0
+}
+.cubespinner div {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #ccc;
+	background: rgba(255, 255, 255, .8);
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, .2);
+	text-align: center;
+	font-size: 40px
+}
+.cubespinner .face1 {
+	-webkit-transform: translateZ(30px);
+	-moz-transform: translateZ(30px);
+	-ms-transform: translateZ(30px);
+	transform: translateZ(30px)
+}
+.cubespinner .face2 {
+	-webkit-transform: rotateY(90deg) translateZ(30px);
+	-moz-transform: rotateY(90deg) translateZ(30px);
+	-ms-transform: rotateY(90deg) translateZ(30px);
+	transform: rotateY(90deg) translateZ(30px)
+}
+.cubespinner .face3 {
+	-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
+	-moz-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
+	-ms-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
+	transform: rotateY(90deg) rotateX(90deg) translateZ(30px)
+}
+.cubespinner .face4 {
+	-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
+	-moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
+	-ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
+	transform: rotateY(180deg) rotateZ(90deg) translateZ(30px)
+}
+.cubespinner .face5 {
+	-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
+	-moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
+	-ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
+	transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px)
+}
+.cubespinner .face6 {
+	-webkit-transform: rotateX(-90deg) translateZ(30px);
+	-moz-transform: rotateX(-90deg) translateZ(30px);
+	-ms-transform: rotateX(-90deg) translateZ(30px);
+	transform: rotateX(-90deg) translateZ(30px)
+}
+@media screen and (max-width: 600px) {
+	* {
+		flex: 100%;
+		max-width: 100%;
+	}
+}

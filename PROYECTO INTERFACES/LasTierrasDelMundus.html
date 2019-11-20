@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title id="titulo">Las Tierras Del Mundus</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8; width=device-width, initial-scale=1.0">
+	<link name="viewport" rel="stylesheet" type="text/css" href="estilo.css" title="style" />
+</head>
+
+<body>
+	<div id="contenedor">
+		<!-- Cabecera -->
+		<div id="cabecera">
+			<div id="logo">
+				<img src="ungoloz.png" id="imglogoungo">
+				<img src="logo.png" id="imglogo">
+				<header id="header">
+					<h1>LAS TIERRAS DEL MUNDUS</h1>
+					<h3>El lugar de encuentro para roleros de D&D</h3>
+				</header>
+			</div>
+			<div id="buscador">
+				<form action="#" method="post">Buscar &nbsp;
+					<input name="busqueda" type="text" autocomplete="off" />
+					<!-- La página de búsqueda es una función que se usará mucha veces, con lo que si ponemos que se autocomplete te pueden salir demasiadas
+                            opciones, la cual puede abrumar al usuario -->
+				</form>
+			</div>
+			<div class="buttons">
+				<div class="child buttonindex">
+					<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+				</div>
+				<div class="child buttonindex">
+					<button>Herramientas</button>
+					<!-- He usado translate aqui porque queria desplazar el menú un poco hacia arriba, mas cerca del logo -->
+				</div>
+			</div>
+			<div id="id01" class="modal">
+				<form class="modal-content animate" action="/action_page.php" method="post">
+					<div class="imgcontainer"> <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+						<img src="img_avatar2.png" alt="Avatar" class="avatar">
+					</div>
+					<div class="container">
+						<label for="uname"><b>Username</b>
+						</label>
+						<input type="text" placeholder="Enter Username" name="uname" required>
+						<label for="psw"><b>Password</b>
+						</label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+						<button type="submit">Login</button>
+						<label>
+							<input type="checkbox" checked="checked" name="remember">Remember me</label>
+					</div>
+					<div class="container" style="background-color:#f1f1f1">
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> <span class="psw">Forgot <a href="#">password?</a></span>
+					</div>
+				</form>
+			</div>
+			<script>
+				// Get the modal
+				var modal = document.getElementById('id01');
+				
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				    if (event.target == modal) {
+				        modal.style.display = "none";
+				    }
+				}
+			</script>
+			<div class="clear"></div>
+		</div>
+		<!-- /Cabecera -->
+		<!-- Menu principal -->
+		<div id="menu"></div>
+		<!-- Lateral -->
+		<div id="lateral">
+			<!-- Noticias -->
+			<div id="noticias">
+				<h3><a href="https://www.youtube.com/watch?v=vFMddwkLjJw" target="_blank">Te recomendamos: Critical Role Episodio 84, Campaña 2</a></h3>
+				<video width="250" height="240" controls>
+					<source src="criticalrole.mp4" type="video/mp4">
+				</video>
+				<h3>¿Te resulta útil esta página?</h3>
+				<form>
+					<label for="si">Sí</label>
+					<input type="radio" name="opcionutil" id="si" value="si" autofocus>
+					<br>
+					<!-- Hemos puesto autofocus poque queremos que la gente seleccione que les gusta nuestra página-->
+					<label for="no">No</label>
+					<input type="radio" name="opcionutil" id="no" value="no">
+					<br>¿Cuánto te esta gustando esta página?:
+					<input type="range" name="points" min="0" max="10" id="valor" oninput="ageOutputId.value =valor.value">
+					<output name="ageOutputName" id="ageOutputId">10</output>
+					<br>
+					<input type="submit" value="Enviar">
+					<br>
+					<br>Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:
+					<input type="email" name="email" value="lastierrasdelmundus@gmail.com" readonly>
+				</form>
+			</div>
+			<!-- /Noticias -->
+			<!-- Publicidad -->
+			<div id="publicidad">
+				<h3><a href="#">Publicidad</a></h3>
+				<img src="anuncio.jpg" id="imgpubli">
+			</div>
+			<!-- /Publicidad -->
+		</div>
+		<!-- /Lateral -->
+		<div id="contenido">
+			<!-- Principal -->
+			<div id="principal">
+				<div class="articulo">
+					<section>
+						<h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+						<img src="imagenes/imagen.png" alt="Imagen gen�rica" />
+						<p>Nullam est lacus, suscipit ut, dapibus quis, condimentum ac, risus. Vivamus vestibulum, ipsum sollicitudin faucibus pharetra, dolor metus fringilla dui, vel aliquet pede diam tempor tortor.</p>
+						<p>Vestibulum pulvinar urna et quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vel turpis vitae dui imperdiet laoreet. Quisque eget ipsum.</p>
+					</section>
+				</div>
+				<div class="articulo">
+					<h2>Vivamus lobortis turpis ac ante fringilla faucibus</h2>
+					<img src="imagenes/imagen.png" alt="Imagen gen�rica" />
+					<p>Quisque eget ipsum. Donec commodo, turpis vel venenatis sollicitudin, quam ante convallis justo, sed eleifend justo lectus quis sapien. Ut consequat libero eget est.</p>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum hendrerit neque. Mauris id ligula non elit mattis semper. Fusce arcu ipsum, tempus eget, tincidunt at, imperdiet in, mi.</p>
+					<p>Sed fermentum cursus dolor. Aenean a diam. Phasellus feugiat. Donec tempor dignissim sem.</p>
+					<p><a href="#">Seguir leyendo...</a>
+					</p>
+				</div>
+			</div>
+			<!-- /Principal -->
+			<!-- Secundario -->
+			<div id="secundario">
+				<aside>
+					<h2>Phasellus blandit</h2>
+					<p>Praesent sodales imperdiet augue. Mauris lorem felis, semper eu, tincidunt eu, sollicitudin eget, sem. Nulla facilisi. Morbi ut enim ut enim ultricies dapibus.</p>
+					<p><a href="#">Seguir leyendo...</a>
+					</p>
+					<div class="stage">
+						<div class="cubespinner">
+							<div class="face1">1</div>
+							<div class="face2">2</div>
+							<div class="face3">3</div>
+							<div class="face4">4</div>
+							<div class="face5">5</div>
+							<div class="face6">6</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<!-- /Secundario -->
+		</div>
+		<!-- /Contenido -->
+		<div class="clear"></div>
+		<!-- Pie -->
+		<div id="pie">
+			<footer> <span class="enlaces">
+                            <a href="#">Nulla</a> |
+                            <a href="#">Pharetra</a> |
+                            <a href="#">Luctus</a> |
+                            <a href="#">Ipsum</a> |
+                            <a href="#">Proin</a> |
+                            <a href="#">Placerat</a>
+                        </span>
+				<span class="copyright">
+                            &copy; Copyright ADA ITS
+                        </span>
+			</footer>
+			<div class="clear"></div>
+		</div>
+		<!-- /Pie -->
+	</div>
+	<!-- /Contenedor -->
+</body>
+
+</html>
