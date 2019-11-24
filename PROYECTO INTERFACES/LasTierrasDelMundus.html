@@ -37,16 +37,16 @@
 			</div>
 			<div id="id01" class="modal">
 				<form class="modal-content animate" action="/action_page.php" method="post">
-					<div class="imgcontainer"> <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-						<img src="img_avatar2.png" alt="Avatar" class="avatar">
-					</div>
+					
 					<div class="container">
+						<label for="uname" id="loginsesion"><b>TE RECOMENDAMOS INICIAR SESIÓN PARA DISFRUTAR DE TODAS LAS FUNCIONALIDADES</b>
+							<br>
 						<label for="uname"><b>Username</b>
 						</label>
-						<input type="text" placeholder="Enter Username" name="uname" required>
+						<input type="text" placeholder="Enter Username" name="uname" class="inputlogin" required>
 						<label for="psw"><b>Password</b>
 						</label>
-						<input type="password" placeholder="Enter Password" name="psw" required>
+						<input type="password" placeholder="Enter Password" name="psw" class="inputlogin" required>
 						<button type="submit">Login</button>
 						<label>
 							<input type="checkbox" checked="checked" name="remember">Remember me</label>
@@ -101,7 +101,7 @@
 			<!-- /Noticias -->
 			<!-- Publicidad -->
 			<div id="publicidad">
-				<h3><a href="#">Publicidad</a></h3>
+				
 				<img src="anuncio.jpg" id="imgpubli">
 			</div>
 			<!-- /Publicidad -->
@@ -132,10 +132,11 @@
 			<!-- Secundario -->
 			<div id="secundario">
 				<aside>
-					<h2>Phasellus blandit</h2>
-					<p>Praesent sodales imperdiet augue. Mauris lorem felis, semper eu, tincidunt eu, sollicitudin eget, sem. Nulla facilisi. Morbi ut enim ut enim ultricies dapibus.</p>
-					<p><a href="#">Seguir leyendo...</a>
-					</p>
+						<div class="flex-container">
+								<div href="https://5emagic.shop/" onclick="document.location=this.id+'.html';return false;"><img src="book.jpg" id="imgapli"></div>
+								<div><img src="spotify.png" id="imgapli"></div>
+								<div><img src="encuentros.png" id="imgapli"></div>  
+							  </div>
 					<div class="stage">
 						<div class="cubespinner">
 							<div class="face1">1</div>
