@@ -3,8 +3,8 @@
 
 <head>
 	<title id="titulo">Las Tierras Del Mundus</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8; width=device-width, initial-scale=1.0">
-	<link name="viewport" rel="stylesheet" type="text/css" href="estilo.css" title="style" />
+	<meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css" title="style" id="link" />
 </head>
 
 <body>
@@ -15,8 +15,9 @@
 				<img src="ungoloz.png" id="imglogoungo">
 				<img src="logo.png" id="imglogo">
 				<header id="header">
-					<h1>LAS TIERRAS DEL MUNDUS</h1>
-					<h3>El lugar de encuentro para roleros de D&D</h3>
+					<h1 id="ti" translate="no">LAS TIERRAS DEL MUNDUS</h1>
+					<!-- He puesto translate aqui porque es el título de la página y no debería traducirse-->
+					<h3 id="subti">El lugar de encuentro para roleros de D&D</h3>
 				</header>
 			</div>
 			<div id="buscador">
@@ -28,31 +29,33 @@
 			</div>
 			<div class="buttons">
 				<div class="child buttonindex">
-					<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+					<button onclick="document.getElementById('id01').style.display='block'">LOGIN</button>
 				</div>
-				<div class="child buttonindex">
-					<button>Herramientas</button>
+				<div class="child buttonindex" href="https://www.reddit.com/r/dndnext/comments/d6urhz/update_my_rather_extensive_curated_spotify/" onclick="document.location=this.id+'file:///C:/Users/pablo/OneDrive/Escritorio/PROYECTO%20INTERFACES/register.html';return false;">
+					<button src="register.html">REGISTRARSE</button>
 					<!-- He usado translate aqui porque queria desplazar el menú un poco hacia arriba, mas cerca del logo -->
 				</div>
 			</div>
 			<div id="id01" class="modal">
-				<form class="modal-content animate" action="/action_page.php" method="post">
+				<form class="modal-content animate" action="C:\Users\pablo\OneDrive\Escritorio\PROYECTO INTERFACES/LasTierrasDelMundus.html" method="post">
 					
 					<div class="container">
 						<label for="uname" id="loginsesion"><b>TE RECOMENDAMOS INICIAR SESIÓN PARA DISFRUTAR DE TODAS LAS FUNCIONALIDADES</b>
 							<br>
-						<label for="uname"><b>Username</b>
+							<br>
+						<label for="uname"><b>Nombre de ususario</b>
 						</label>
-						<input type="text" placeholder="Enter Username" name="uname" class="inputlogin" required>
-						<label for="psw"><b>Password</b>
+						<input type="text" placeholder="Nombre de Usuario/Correo electrónico" name="uname" class="inputlogin" required>
+						<label for="psw"><b>Contraseña</b>
 						</label>
-						<input type="password" placeholder="Enter Password" name="psw" class="inputlogin" required>
-						<button type="submit">Login</button>
+						<input type="password" placeholder="Contraseña" name="psw" class="inputlogin" autocomplete="off" required>
+						<!-- Autocomplete off porque si se autocompleta la contraseña podría verla alguien externo-->
+						<button type="submit">LOGIN</button>
 						<label>
-							<input type="checkbox" checked="checked" name="remember">Remember me</label>
+							<input type="checkbox" checked="checked" name="remember">Recuerdame</label>
 					</div>
-					<div class="container" style="background-color:#f1f1f1">
-						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> <span class="psw">Forgot <a href="#">password?</a></span>
+					<div class="container" >
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button> <span class="psw">¿Has olvidado la <a href="#" id="link"> contraseña?</a></span>
 					</div>
 				</form>
 			</div>
@@ -76,7 +79,7 @@
 		<div id="lateral">
 			<!-- Noticias -->
 			<div id="noticias">
-				<h3><a href="https://www.youtube.com/watch?v=vFMddwkLjJw" target="_blank">Te recomendamos: Critical Role Episodio 84, Campaña 2</a></h3>
+				<h3><a href="https://www.youtube.com/watch?v=vFMddwkLjJw" target="_blank" id="link">Te recomendamos: Critical Role Episodio 84, Campaña 2</a></h3>
 				<video width="250" height="240" controls>
 					<source src="criticalrole.mp4" type="video/mp4">
 				</video>
@@ -88,14 +91,14 @@
 					<!-- Hemos puesto autofocus poque queremos que la gente seleccione que les gusta nuestra página-->
 					<label for="no">No</label>
 					<input type="radio" name="opcionutil" id="no" value="no">
-					<br>¿Cuánto te esta gustando esta página?:
+					<br>¿Cuánto te esta gustando esta página?
 					<input type="range" name="points" min="0" max="10" id="valor" oninput="ageOutputId.value =valor.value">
 					<output name="ageOutputName" id="ageOutputId">10</output>
 					<br>
-					<input type="submit" value="Enviar">
 					<br>
 					<br>Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:
-					<input type="email" name="email" value="lastierrasdelmundus@gmail.com" readonly>
+					<input type="email" name="email" value="lastierrasdelmundus@gmail.com" autocomplete="off" readonly>
+					<!-- Autocomplete off aqui porque solo puede haber un mail puesto por los desarrolladores-->
 				</form>
 			</div>
 			<!-- /Noticias -->
@@ -112,30 +115,47 @@
 			<div id="principal">
 				<div class="articulo">
 					<section>
-						<h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
-						<img src="imagenes/imagen.png" alt="Imagen gen�rica" />
-						<p>Nullam est lacus, suscipit ut, dapibus quis, condimentum ac, risus. Vivamus vestibulum, ipsum sollicitudin faucibus pharetra, dolor metus fringilla dui, vel aliquet pede diam tempor tortor.</p>
-						<p>Vestibulum pulvinar urna et quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vel turpis vitae dui imperdiet laoreet. Quisque eget ipsum.</p>
+						<h2 id="trastornos">La Era de los Trastornos</h2>
+						<img src="trastornos.jpg" alt="Imagen generica" id="img1" />
+						<p id="nomovil">Uno de los momentos recientes más importantes de la historia de Faerûn es la Era de los Trastornos, también llamada Guerra de los Dioses o Crisis de los Avatares. Esto sucedió en el año 1358 (según el Cómputo de los Valles).</p><p id="movil">Hasta ese momento, los dioses se preocupaban más de sus luchas internas que de lo que sucedía en Toril, al que veían como una simple diversión. La gota que colmó el vaso fue el robo por parte de Bane (en su anterior encarnación) y Myrkul (antiguo dios de los muertos) de las Tablas del Destino con el objetivo de ganar poder sobre los demás dioses, ya que el objeto del hurto era un registro con las responsabilidades de todas las deidades de Faerûn.
+
+								El señor Ao (dios supremo) montó en cólera, ya que entendió que a los dioses ya no les preocupaban sus fieles, y como castigo les expulsó de sus reinos extraplanarios y les envió a Faerûn, a que caminasen en cuerpos de mortales llamados avatares. Sólo Helm, el vigilante, quedó guardando el acceso a los reinos extraplanarios para que ningún dios o semidiós osase volver hasta que el Dios Supremo diese por finalizado el castigo.
+								
+								Durante este periodo, que duró aproximadamente un mes, hubo varios cambios en el panteón:
+								
+								La diosa de la magia, Mystra, murió, pero la humana Medianoche se hizo cargo de su ámbito de poder y de su nombre.
+								Torm murió luchando contra Bane, pero como lo hizo en cumplimiento de sus valores (obediencia y deber) fue readmitido como deidad por Ao.
+								Al morir Myrkul (dios de los muertos), su ámbito pasó a Cyric, pero éste lo perdió en favor de Kelemvor.
+								Cyric usó la espada Matadioses (encarnación de Máscara) para matar a Baal (dios del asesinato) y a Leira (diosa del engaño y las ilusiones) apoderándose del ámbito de poder de ambos. Y más tarde, rompió la espada para debilitar a Mascara (dios de los ladrones).
+								Tras la vuelta de los dioses a sus reinos extraplanarios, Ao decretó que el poder de cada dios procederá en parte del número y fervor de sus adoradores: dicho de otro modo, que los dioses no podían dejar de lado a sus discípulos si no querían perder parte de su poder.
+								
+								Durante este período, no funcionaron o lo hicieron aleatoriamente los conjuros de magia divina (que usaban clérigos, druidas, exploradores o paladines) que derivan del dios particular de cada uno, ni los de magia arcana (magos, hechiceros o bardos), que derivan de la Urdimbre de Mystra o de la Urdimbre Sombría de Shar, aunque no se vieron afectados los poderes psiónicos.. Tras este período, aparecieron algunas zonas de magia muerta o de magia salvaje.</p>
+							
 					</section>
 				</div>
 				<div class="articulo">
-					<h2>Vivamus lobortis turpis ac ante fringilla faucibus</h2>
-					<img src="imagenes/imagen.png" alt="Imagen gen�rica" />
-					<p>Quisque eget ipsum. Donec commodo, turpis vel venenatis sollicitudin, quam ante convallis justo, sed eleifend justo lectus quis sapien. Ut consequat libero eget est.</p>
-					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum hendrerit neque. Mauris id ligula non elit mattis semper. Fusce arcu ipsum, tempus eget, tincidunt at, imperdiet in, mi.</p>
-					<p>Sed fermentum cursus dolor. Aenean a diam. Phasellus feugiat. Donec tempor dignissim sem.</p>
-					<p><a href="#">Seguir leyendo...</a>
+				<section>
+					<h2 id="conjuros">La Plaga de los Conjuros</h2>
+					<img src="conjuros.png" alt="Imagen generica" id="img2" />
+					<p id="movil">Sin embargo, la Crisis de los Avatares fue solo el comienzo de una catástrofe mayor. En el año 1385 del Cómputo de los Valles, Mystra fue asesinada por Cyric, quien fue apoyado por Shar, ya que esta quería hacerse con el control de la Urdimbre. Sin embargo, con la muerte de Mystra, la Urdimbre colapsó destruyendo a su paso la Urdimbre Oscura, creando un poderoso efecto mágico conocido como la Plaga de los Conjuros. Una tormenta de fuego azul se extendió por todo el cosmos, afectando la misma base del espacio y el tiempo. Los dominios de los Dioses fueron destruidos y dispersados por el Mar Astral (también conocido como Plano Astral), y solo las Deidades Mayores fueron capaces de proteger sus reinos de los efectos de la Plaga, mientras que la gran mayoría de Deidades Menores murieron o desaparecieron durante la explosión.
+
+							En Toril, la devastación fue catastrófica. Los lugares donde reinaba la Magia Salvaje se deformaron terriblemente, convirtiéndose las llamadas "Tierras deformadas por la Plaga". Las criaturas que habitaban en estas regiones y que lograron sobrevivir, se transformaron en las aberraciones conocidas como los "Plagacambiados", y los que recibieron un efecto menor, fueron marcados con las monstruosas y poderosas "cicatrices mágicas". Muchas de las regiones conocidas fueron borradas de la faz de Faerûn, mientras que se daba origen a nuevas regiones. Durante el proceso, Toril se alineó con su planeta gemelo, Abeir, y la plaga también afecto este mundo, intercambiando grandes porciones de tierra de Toril con otras de Abeir.
+							
+							Al no existir la Urdimbre para que controlara la magia, los efectos de esta se hicieron impredecibles, y la mayoría de las veces, cualquier intento de lanzar un hechizo era fallido. Miles de magos y otros lanza-conjuros fueron destruidos o se volvieron locos en los años siguientes a la destrucción de la Urdimbre, y los que pudieron sobrevivir a esto, simplemente quedaron incapacitados de usar cualquier tipo de magia. La situación no se normalizaría sino hasta el año 1395, cuando la esencia de la magia se normalizo poco a poco, y los magos y otros lanza-conjuros tuvieron que adaptarse a este nuevo ambiente mágico o hacer pactos con criaturas poderosas (Dioses y seres por el estilo) para recuperar su habilidad de controlar la magia.</p>
+					
+					<p><a href="#" id="link">Seguir leyendo...</a>
 					</p>
+				</section>
 				</div>
 			</div>
 			<!-- /Principal -->
 			<!-- Secundario -->
 			<div id="secundario">
 				<aside>
-						<div class="flex-container">
-								<div href="https://5emagic.shop/" onclick="document.location=this.id+'.html';return false;"><img src="book.jpg" id="imgapli"></div>
-								<div><img src="spotify.png" id="imgapli"></div>
-								<div><img src="encuentros.png" id="imgapli"></div>  
+						<div class="flex-containersecun">
+								<div href="https://5emagic.shop/" onclick="document.location=this.id+'https://5emagic.shop/';return false;" ><img src="book.jpg" id="imgapli"></div>
+								<div href="https://www.reddit.com/r/dndnext/comments/d6urhz/update_my_rather_extensive_curated_spotify/" onclick="document.location=this.id+'https://www.reddit.com/r/dndnext/comments/d6urhz/update_my_rather_extensive_curated_spotify/';return false;"><img src="spotify.png" id="imgapli"></div>
+								<div href="https://www.dndbeyond.com/encounter-builder/" onclick="document.location=this.id+'https://www.dndbeyond.com/encounter-builder';return false;" ><img src="encuentros.png" id="imgapli"></div>  
 							  </div>
 					<div class="stage">
 						<div class="cubespinner">
@@ -149,6 +169,41 @@
 					</div>
 				</aside>
 			</div>
+			<div id="publicmovil">
+					<img src="anuncio.jpg" id="imgpublimovil">
+			</div>
+			<div id="lateralmovil">
+					<!-- Noticias -->
+					<div id="noticiasmovil">
+						<video width="250" height="240" controls>
+							<source src="criticalrole.mp4" type="video/mp4">
+						</video>
+						<h3>¿Te resulta útil esta página?</h3>
+						<form>
+							<label for="si">Sí</label>
+							<input type="radio" name="opcionutil" id="si" value="si" autofocus>
+							<br>
+							<!-- Hemos puesto autofocus poque queremos que la gente seleccione que les gusta nuestra página-->
+							<label for="no">No</label>
+							<input type="radio" name="opcionutil" id="no" value="no">
+							<br>¿Cuánto te esta gustando esta página?
+							<input type="range" name="points" min="0" max="10" id="valor" oninput="ageOutputId.value =valor.value">
+							<output name="ageOutputName" id="ageOutputId">10</output>
+							
+							<br>Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:
+							<input type="email" name="email" value="lastierrasdelmundus@gmail.com" autocomplete="off" readonly>
+							<!-- Autocomplete off aqui porque solo puede haber un mail puesto por los desarrolladores-->
+						</form>
+					</div>
+					<!-- /Noticias -->
+					<!-- Publicidad -->
+					<div id="publicidad">
+						
+						<img src="anuncio.jpg" id="imgpubli">
+					</div>
+					<!-- /Publicidad -->
+				</div>
+			
 			<!-- /Secundario -->
 		</div>
 		<!-- /Contenido -->
@@ -156,15 +211,14 @@
 		<!-- Pie -->
 		<div id="pie">
 			<footer> <span class="enlaces">
-                            <a href="#">Nulla</a> |
-                            <a href="#">Pharetra</a> |
-                            <a href="#">Luctus</a> |
-                            <a href="#">Ipsum</a> |
-                            <a href="#">Proin</a> |
-                            <a href="#">Placerat</a>
+                            <a href="#" id="link">¿Quienes somos?</a> |
+                            <a href="#" id="link">Blog</a> |
+                            <a href="#" id="link">Trabajo</a> |
+                            <a href="#" id="link">Noticias</a> |
+                            <a href="#" id="link">Ayuda</a> |
                         </span>
 				<span class="copyright">
-                            &copy; Copyright ADA ITS
+                          2019 &copy; Copyright ADA ITS
                         </span>
 			</footer>
 			<div class="clear"></div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="titulo">Cuenta de Las Tierras Del Mundus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8; width=device-width, initial-scale=1.0">
+    <link name="viewport" rel="stylesheet" type="text/css" href="estilo.css" title="style" />
+
+</head>
+<body>
+<h1 id="creacuenta">CREA UNA CUENTA</h1>
+<div class="tiamat"></div>
+<div id="id02" class="modal">
+    <form class="modal-content animateregister" action="LasTierrasDelMunudus.html" method="post">
+      
+      <div class="containerregister">
+          <header id="select">
+        <label for="uname" id="registersesion" translate="no"><b id="registertransform">REGISTRATE PARA DISFRUTAR AL MÁXIMO DE LAS TIERRAS DEL MUNDUS</b>
+          <!-- He usado translate ya que no quiero que se traduca el nombre de Las Tierras del Mundus-->
+        </header>
+          <br>
+          <select id="selectregister">
+              <option value="Selecciona">Selecciona un país</option>
+              <option value="sp">España</option>
+              <option value="eeuu">Estados Unidos</option>
+              <option value="rusia">Rusia</option>
+            </select>
+          <br>
+          <div class="row">
+              <form class="form-inline">
+                <fieldset>
+        <label for="uname"><b>Nombre</b>
+        </label>
+        <input type="text" placeholder="Introduce tu Nombre" name="uname" class="inputregister"  autofocus required>
+        <!-- autofocus porque lo primero es el nombre-->
+        <label for="uname"><b>Apellidos</b>
+        </label>
+        <input type="text" placeholder="Introduce tus Apellidos" name="uname" class="inputregister" required>
+        <!-- No se puede poner autocomplete off aqui -->
+      </fieldset>
+    </form>
+  </div>
+
+  <nav class="row">
+      <form class="form-inline">
+        <fieldset>
+<label for="uname"><b>Día de nacimiento</b>
+</label>
+<br>
+<input type="number"  name="uname" class="inputregister"  autofocus required>
+<!-- autofocus para que se empieze a escribir por el día-->
+<br>
+<label for="uname"><b>Mes de nacimiento</b>
+  <section>
+<select id="selectregister" placeholder="Mes">
+    <option value="en">Enero</option>
+    <option value="fe">Febrero</option>
+    <option value="mar">Marzo</option>
+    <option value="ab">Abril</option>
+    <option value="may">Mayo</option>
+    <option value="jn">Junio</option>
+    <option value="jl">Julio</option>
+    <option value="ag">Agosto</option>
+    <option value="sep">Septiembre</option>
+    <option value="oc">Octubre</option>
+    <option value="nv">Noviembre</option>
+    <option value="dc">Diciembre</option>
+  </select>
+</section>
+  <label for="uname"><b>Año de nacimiento</b>
+  </label>
+  <br>
+  <input type="number"  name="uname" class="inputregister" autocomplete="off" required>
+  <!-- Autocomplete off ya que este campo varía cada año-->
+</fieldset>
+</form>
+</nav>
+
+<div class="row">
+    <form class="form-inline">
+      <fieldset>
+<label for="uname"><b>Dirección de correo electrónico</b>
+  <br>
+</label>
+<input type="email" placeholder="ejemplo@gmail.com" name="uname" class="inputregister" required>
+<br>
+<label for="uname"><b>Contraseña</b>
+</label>
+<input type="password" placeholder="Introduce tu contraseña" name="uname" class="inputregister" autocomplete="off" autofocus required>
+<!-- autofoucs porque la contraseña es necesaria-->
+<!-- Autocomplete off aqui para que no vea nadie la contraseña si se autocompleta-->
+</fieldset>
+</form>
+</div>
+
+<div class="row">
+    <form class="form-inline">
+      <fieldset>
+<label for="uname"><b>Ficha de Personaje</b>
+  <!-- No se puede poner autocomplete aqui-->
+  
+  <br>
+</label>
+<input type="file" placeholder="Ficha de personaje" name="uname" class="inputregister"  autofocus required>
+<!-- autofoucs porque es el único input del form-->
+</fieldset>
+</form>
+</div>
+      
+        
+        <button type="submit">REGISTRARSE</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember">Recuerdame</label>
+      </div>
+      
+    </form>
+  </div>
+
+  
+
+  <footer> <span class="enlaces">
+      <a href="#" id="link">¿Quienes somos?</a> |
+      <a href="#" id="link">Blog</a> |
+      <a href="#" id="link">Trabajo</a> |
+      <a href="#" id="link">Noticias</a> |
+      <a href="#" id="link">Ayuda</a> |
+  </span>
+<span class="copyright">
+    2019 &copy; Copyright ADA ITS
+  </span>
+</footer>
+
+</body>
+</html>

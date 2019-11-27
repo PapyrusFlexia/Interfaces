@@ -1,7 +1,7 @@
 html
 {	
 color: lightgrey;
-background-color: #333333;
+background-color: #696969;
 font: normal 9px /*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
 }
 
@@ -63,6 +63,7 @@ img {
 	float: right;
 	width: 20%;
 }
+
 #pie {
 	font: normal 9px
 	display: flex;
@@ -117,18 +118,34 @@ img {
 	display: inline;
 	float: left;
 }
-#historia:link #herramientas:link #login:link {
-	color: blue;
+/*#historia:link #herramientas:link #login:link {
+	color: lightblue;
 }
 #historia:visited #herramientas:visited #login:visited {
-	color: purple;
+	color: pink;
 }
 #historia:hover #herramientas:hover #login:hover {
 	color: red;
 }
 #historia:active #herramientas:active #login:active {
 	color: yellow;
+}*/
+
+#link:link #link:link #link:link {
+	color: lightblue;
 }
+#link:visited #link:visited #link:visited {
+	color: pink;
+}
+#link:hover #link:hover #link:hover {
+	color: red;
+}
+#link:active #link:active #link:active {
+	color: yellow;
+}
+
+
+
 #menu {
 	margin-left: -10%;
 }
@@ -140,6 +157,8 @@ img {
 	width: 100px;
 	float: left;
 }
+
+
 /*-- Pie de pagina ---------------------------------------------------*/
 
 #pie .enlaces {
@@ -155,8 +174,8 @@ img {
 #cabecera,
 #menu,
 #lateral,
-#lateral #noticias,
-#lateral #publicidad,
+#lateral #noticias, #noticiasmovil
+#lateral #publicidad, #publimovil
 #contenido,
 #contenido #principal,
 #contenido #secundario,
@@ -168,6 +187,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	padding: 0;
+	display: grid;
 }
 #cabecera {
 	padding: 1em;
@@ -186,6 +206,7 @@ img {
 }
 #contenido #principal {
 	width: 73%;
+	display: grid;
 }
 #pie {
 	padding: .5em 0;
@@ -196,23 +217,50 @@ img {
 #contenido #principal .articulo {
 	margin-bottom: 1em;
 	display: grid;
+	text-align: center;
+	
+}
+#img2{
+	margin-left: 5%
 }
 #contenido #principal .articulo img {
 	margin: .5em;
 }
-#lateral #publicidad {
+#lateral #publicidad #publimovil #noticiasmovil {
 	margin-top: 1em;
 }
+#publimovil {
+	display: flex;
+	float: right;
+	width: 20%;
+	
+}
+
+#lateralmovil {
+	display: none;
+}
+#imgpublimovil{
+	margin-left: 5%;
+	margin-top: 5%;
+	width: 180px;
+	height: 150px;
+	object-fit: cover;
+	display: none;
+	
+}
+
 #noticias {
 	display: flex;
 	flex-direction: column;
 	border: 1px solid #C5C5C5;
 	text-align: center;
+	display: grid;
 }
 #publicidad {
 	
 	text-align: center;
 	margin-left: -5%;
+	display: grid;
 }
 #imgpubli {
 	width: 260px;
@@ -233,22 +281,37 @@ img {
 #secundario {
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 	border: 1px solid #ccc;
 	text-align: left;
+	
 }
 
 #buscador {
 	margin-left: 70%;
 }
 
+.container{
+	background-color:"#f1f1f1";
+	display: center;
+	
+}
+
+.containerregister{
+	background-color:"#f1f1f1";
+	display: center;
+	
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: #333333;
+	background-color: #696969;
+	display: grid;
   }
   
   .flex-container > div {
-    background-color: #333333;
+    background-color: #696969;
     width: 100px;
     margin: 10px;
     text-align: center;
@@ -310,11 +373,33 @@ img.avatar {
 	padding: 16px;
 }
 
+.containerregister {
+	color: black;
+	background-color: lightgrey;
+	font: normal 9px /*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
+	padding: 16px;
+}
+
+#creacuenta{
+	text-align: center;
+	font-size: 75px
+}
+
 .inputlogin {
 	color: black;
 	background-color: lightgrey;
+}
 
+.inputregister{
+	color: black;
+	background-color: lightgrey;
 
+}
+
+#selectregister{
+	display: block;
+	margin: 0 auto;
+	
 }
 span.psw {
 	float: right;
@@ -324,9 +409,8 @@ span.psw {
 
 .modal {
 	color: lightgrey;
-	background-color: #333333;
+	background-color: #696969;
 	font: normal 9px /*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
-	display: none;
 	/* Hidden by default */
 	position: fixed;
 	/* Stay in place */
@@ -347,10 +431,49 @@ span.psw {
 	padding-top: 60px;
 }
 
+#id02{
+	height: 100%;
+	margin: 0;
+	background-image: url("tiamat.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	background-image: url("dices.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tiamat {
+
+	background-image: url("tiamat.jpg");
+	height: 100%; 
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
 #loginsesion{
 	text-align: center;
-	margin-left: 15%;
+	margin-left: 3%;
 }
+
+#registersesion{
+	text-align: center;
+	margin-left: 23%;
+}
+
+fieldset {
+	text-align: center;
+}
+
+
 
 .modal-content {
 	background-color: #fefefe;
@@ -375,6 +498,8 @@ span.psw {
 	color: red;
 	cursor: pointer;
 }
+
+
 /* Add Zoom Animation */
 
 .animate {
@@ -413,31 +538,43 @@ span.psw {
 		width: 180px;
 		height: 150px;
 		text-align: center;
+		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+		-o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 		-moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 		-ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 	}
 	16% {
+		-webkit-transform: rotateY(-90deg);
+		-o-transform: rotateY(-90deg);
 		-moz-transform: rotateY(-90deg);
 		-ms-transform: rotateY(-90deg);
 		transform: rotateY(-90deg);
 	}
 	33% {
+		-webkit-transform: rotateY(-90deg) rotateZ(90deg);
+		-o-transform: rotateY(-90deg) rotateZ(90deg);
 		-moz-transform: rotateY(-90deg) rotateZ(90deg);
 		-ms-transform: rotateY(-90deg) rotateZ(90deg);
 		transform: rotateY(-90deg) rotateZ(90deg);
 	}
 	50% {
+		-webkit-transform: rotateY(-180deg) rotateZ(90deg);
+		-o-transform: rotateY(-180deg) rotateZ(90deg);
 		-moz-transform: rotateY(-180deg) rotateZ(90deg);
 		-ms-transform: rotateY(-180deg) rotateZ(90deg);
 		transform: rotateY(-180deg) rotateZ(90deg);
 	}
 	66% {
+		-webkit-transform: rotateY(-270deg) rotateX(90deg);
+		-o-transform: rotateY(-270deg) rotateX(90deg);
 		-moz-transform: rotateY(-270deg) rotateX(90deg);
 		-ms-transform: rotateY(-270deg) rotateX(90deg);
 		transform: rotateY(-270deg) rotateX(90deg);
 	}
 	83% {
+		-webkit-transform: rotateX(90deg);
+		-o-transform: rotateX(90deg);
 		-moz-transform: rotateX(90deg);
 		-ms-transform: rotateX(90deg);
 		transform: rotateX(90deg);
@@ -455,10 +592,12 @@ span.psw {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-transform-origin: 30px 30px 0;
 	-moz-transform-origin: 30px 30px 0;
 	-ms-transform-origin: 30px 30px 0;
+	-o-transform-origin: 30px 30px 0;
 	transform-origin: 30px 30px 0
 }
 .cubespinner div {
@@ -478,41 +617,173 @@ span.psw {
 	-webkit-transform: translateZ(30px);
 	-moz-transform: translateZ(30px);
 	-ms-transform: translateZ(30px);
+	-o-transform: translateZ(30px);
 	transform: translateZ(30px)
 }
 .cubespinner .face2 {
 	-webkit-transform: rotateY(90deg) translateZ(30px);
 	-moz-transform: rotateY(90deg) translateZ(30px);
 	-ms-transform: rotateY(90deg) translateZ(30px);
+	-o-transform: rotateY(90deg) translateZ(30px);
 	transform: rotateY(90deg) translateZ(30px)
 }
 .cubespinner .face3 {
 	-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
 	-moz-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
 	-ms-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
+	-o-transform: rotateY(90deg) rotateX(90deg) translateZ(30px);
 	transform: rotateY(90deg) rotateX(90deg) translateZ(30px)
 }
 .cubespinner .face4 {
 	-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
 	-moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
 	-ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
+	-o-transform: rotateY(180deg) rotateZ(90deg) translateZ(30px);
 	transform: rotateY(180deg) rotateZ(90deg) translateZ(30px)
 }
 .cubespinner .face5 {
 	-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
 	-moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
 	-ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
+	-o-transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px);
 	transform: rotateY(-90deg) rotateZ(90deg) translateZ(30px)
 }
 .cubespinner .face6 {
 	-webkit-transform: rotateX(-90deg) translateZ(30px);
 	-moz-transform: rotateX(-90deg) translateZ(30px);
 	-ms-transform: rotateX(-90deg) translateZ(30px);
+	-o-transform: rotateX(-90deg) translateZ(30px);
 	transform: rotateX(-90deg) translateZ(30px)
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
 	* {
+		
 		flex: 100%;
 		max-width: 100%;
+		
 	}
+
+	body{
+		width: 10000px;
+	}
+
+	#imglogoungo {
+		opacity: 0;
+		width: 30%;
+		height: 30%;
+		float: left;
+		object-fit: cover;
+		z-index: 2;
+		transition: 2.5s;
+	}
+
+	#contenido #principal {
+		width: 60%;
+		margin-left: -30%;
+	}
+
+	#secundario {
+		margin-right: 10%;
+	}
+	
+	.articulo{
+		font-size: 35px;
+		width: 500px;
+	}
+
+	#trastornos{
+		margin-right: 40%;
+	}
+
+	#conjuros{
+		margin-right: 15%;
+	}
+
+	#nomovil{
+		margin-top: 10%;
+		font-size: 35px;
+		width: 300px;
+	}
+
+	#movil{
+		
+		font-size: 35px;
+		width: 400px;
+	}
+
+
+	#noticias {
+		display: none;
+		
+	}
+
+	#imgpubli{
+		display: none;
+	}
+
+	
+	#imgpublimovil{
+		display: inline;
+		margin-left: 15%;
+	}
+
+	#noticiasmovil{
+		display: inline;
+	}
+	
+
+	#lateralmovil{
+		display: inline;
+		font-size: 35px;
+		margin-left: 10%;
+		/*width: 10%;
+		margin-left: 30%;*/
+	}
+	
+	#publimovil{
+		margin-top: 30%;
+	}
+
+	#subti{
+		margin-bottom: 20%;
+	}
+
+	#imglogo{
+		display: none;
+	}
+
+	.container{
+	position:relative; /* */
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+	}
+
+	.containerregister{
+		position:fixed; /* */
+		padding:0;
+		margin:0;
+	
+		top:0;
+		left:0;
+	
+		width: 100%;
+		height: 100%;
+		
+		}
+
+	
+
+
+	body {
+	position:relative;
+    
+	}
+
 }

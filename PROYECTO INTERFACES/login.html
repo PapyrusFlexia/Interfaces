@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title id="titulo">Las Tierras Del Mundus</title>
+    <title id="titulo">Cuenta de Las Tierras Del Mundus</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8; width=device-width, initial-scale=1.0">
-    <link name="viewport" rel="stylesheet" type="text/css" href="estiloherramientas.css" title="style" />
+    <link name="viewport" rel="stylesheet" type="text/css" href="estilo.css" title="style" />
 
 </head>
 <body>
-<h1>FOROS</h1>
+<h1>REGISTER</h1>
 
-
-
-<div class="flex-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>  
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>  
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>  
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>  
-</div>
-
-<p>Try resizing the browser window.</p>
+<div id="id01" class="modal">
+    <form class="modal-content animateregister" action="/action_page.php" method="post">
+      
+      <div class="container">
+        <label for="uname" id="registersesion"><b>REGISTRATE PARA DISFRUTAR AL MÁXIMO DE LAS TIERRAS DEL MUNDUS</b>
+          <br>
+          <div id="select">
+          <select id="selectregister">
+              <option value="Selecciona">Selecciona un país</option>
+              <option value="sp">España</option>
+              <option value="eeuu">Estados Unidos</option>
+              <option value="rusia">Rusia</option>
+            </select>
+          </div>
+          <br>
+        <label for="uname"><b>Username</b>
+        </label>
+        <input type="text" placeholder="Enter Username" name="uname" class="inputregister" required>
+        <label for="psw"><b>Password</b>
+        </label>
+        <input type="password" placeholder="Enter Password" name="psw" class="inputregister" required>
+        
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember">Remember me</label>
+      </div>
+      <div class="container" >
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> <span class="psw">Forgot <a href="#" id="link">password?</a></span>
+      </div>
+    </form>
+  </div>
 
 </body>
 </html>
