@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title id="titulo">Cuenta de Las Tierras Del Mundus</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilo.css" title="style" id="link" />
+</head>
+
+<body>
+	<h1 id="creacuenta">CREA UNA CUENTA</h1>
+	<div class="tiamat"></div>
+	<div id="id02" class="modal">
+		<form class="modal-content animateregister" action="LasTierrasDelMunudus.html" method="post">
+			<div class="containerregister">
+				<header id="select">
+					<label id="registersesion" translate="no"><b id="registertransform">REGISTRATE PARA DISFRUTAR AL MÁXIMO DE LAS TIERRAS DEL MUNDUS</b>
+					</label>
+					<!-- He usado translate ya que no quiero que se traduca el nombre de Las Tierras del Mundus-->
+				</header>
+				<div id="stagegiratorio">
+					<p id="giratorio">¡La Marca te necesita!</p>
+				</div>
+				<br>
+				<select id="selectregister01">
+					<option value="Selecciona">Selecciona un país</option>
+					<option value="sp">España</option>
+					<option value="eeuu">Estados Unidos</option>
+					<option value="rusia">Rusia</option>
+				</select>
+				<br>
+				<div class="row">
+					<fieldset>
+						<label><b>Nombre</b>
+						</label>
+						<input type="text" placeholder="Introduce tu Nombre" name="uname" class="inputregister" autofocus required>
+						<!-- autofocus porque lo primero es el nombre-->
+						<label><b>Apellidos</b>
+						</label>
+						<input type="text" placeholder="Introduce tus Apellidos" name="uname" class="inputregister" required>
+						<!-- No se puede poner autocomplete off aqui -->
+					</fieldset>
+				</div>
+				<section>
+					<nav class="row">
+						<fieldset>
+							<label><b>Día de nacimiento</b>
+							</label>
+							<br>
+							<input type="number" name="uname" class="inputregister" required>
+							<br>
+							<label><b>Mes de nacimiento</b>
+							</label>
+							<select id="selectregister02">
+								<option value="en">Enero</option>
+								<option value="fe">Febrero</option>
+								<option value="mar">Marzo</option>
+								<option value="ab">Abril</option>
+								<option value="may">Mayo</option>
+								<option value="jn">Junio</option>
+								<option value="jl">Julio</option>
+								<option value="ag">Agosto</option>
+								<option value="sep">Septiembre</option>
+								<option value="oc">Octubre</option>
+								<option value="nv">Noviembre</option>
+								<option value="dc">Diciembre</option>
+							</select>
+							<label><b>Año de nacimiento</b>
+							</label>
+							<br>
+							<input type="number" name="uname" class="inputregister" autocomplete="off" required>
+							<!-- Autocomplete off ya que este campo varía cada año-->
+						</fieldset>
+					</nav>
+				</section>
+				<div class="row">
+					<fieldset>
+						<label><b>Dirección de correo electrónico</b>
+							<br>
+						</label>
+						<input type="email" placeholder="ejemplo@gmail.com" name="uname" class="inputregister" required>
+						<br>
+						<label><b>Contraseña</b>
+						</label>
+						<input type="password" placeholder="Introduce tu contraseña" name="uname" class="inputregister" autocomplete="off" required>
+						<!-- Autocomplete off aqui para que no vea nadie la contraseña si se autocompleta-->
+					</fieldset>
+				</div>
+				<div class="row">
+					<label><b>Ficha de Personaje</b>
+						<!-- No se puede poner autocomplete aqui-->
+						<br>
+					</label>
+					<input type="file" name="uname" class="inputregister" required>
+				</div>
+				<button type="submit">REGISTRARSE</button>
+			</div>
+		</form>
+	</div>
+	<footer> <span class="enlaces">
+      <a href="#" id="link01">¿Quienes somos?</a> |
+      <a href="#" id="link02">Blog</a> |
+      <a href="#" id="link03">Trabajo</a> |
+      <a href="#" id="link04">Noticias</a> |
+      <a href="#" id="link05">Ayuda</a> |
+  </span>
+		<span class="copyright">
+    2019 &copy; Copyright ADA ITS
+  </span>
+	</footer>
+</body>
+
+</html>
