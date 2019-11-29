@@ -805,7 +805,11 @@ fieldset {
 		margin-left: -30%;
 	}
 	#secundario {
-		margin-right: 10%;
+			margin: auto;
+			-webkit-transform: translateX(20px);
+			-ms-transform: translateX(20px);
+			transform: translateX(20px);
+		
 	}
 	.articulo {
 		font-size: 35px;
@@ -815,8 +819,10 @@ fieldset {
 		margin-right: 40%;
 	}
 	#conjuros {
-		margin-right: 15%;
+		width:200px;
+		margin-left: 15%;
 	}
+	
 	#nomovil {
 		margin-top: 10%;
 		font-size: 35px;
@@ -824,11 +830,11 @@ fieldset {
 	}
 	#movil01 {
 		font-size: 35px;
-		width: 400px;
+		width: 300px;
 	}
 	#movil02 {
 		font-size: 35px;
-		width: 400px;
+		width: 300px;
 	}
 	#noticias {
 		display: none;
@@ -844,6 +850,7 @@ fieldset {
 		margin-left: 15%;
 	}
 	#noticiasmovil {
+		
 		display: inline;
 	}
 	#lateralmovil {
