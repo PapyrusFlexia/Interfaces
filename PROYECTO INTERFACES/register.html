@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 	<title id="titulo">Cuenta de Las Tierras Del Mundus</title>
@@ -12,46 +12,47 @@
 	<h1 id="creacuenta">CREA UNA CUENTA</h1>
 	<div class="tiamat"></div>
 	<div id="id02" class="modal">
-		<form class="modal-content animateregister" action="LasTierrasDelMunudus.html" method="post">
+		<form class="modal-content animateregister" action="LasTierrasDelMundus.html" method="post">
 			<div class="containerregister">
 				<header id="select">
-					<label id="registersesion" translate="no"><b id="registertransform">REGISTRATE PARA DISFRUTAR AL MÁXIMO DE LAS TIERRAS DEL MUNDUS</b>
+					<label id="registersesion" translate="no"><strong id="registertransform">REGISTRATE PARA DISFRUTAR AL MÁXIMO DE LAS TIERRAS DEL MUNDUS</strong>
 					</label>
 					<!-- He usado translate ya que no quiero que se traduca el nombre de Las Tierras del Mundus-->
 				</header>
 				<div id="stagegiratorio">
-					<p id="giratorio">¡La Marca te necesita!</p>
+					<p id="giratorio">Selecciona tu país</p>
 				</div>
 				<br>
+				<label for="selectregister01" style= display:none >Selecciona tu país</label>
 				<select id="selectregister01">
-					<option value="Selecciona">Selecciona un país</option>
+					<option value="Selecciona">Andorra</option>
 					<option value="sp">España</option>
 					<option value="eeuu">Estados Unidos</option>
 					<option value="rusia">Rusia</option>
 				</select>
+				
 				<br>
 				<div class="row">
 					<fieldset>
-						<label><b>Nombre</b>
-						</label>
-						<input type="text" placeholder="Introduce tu Nombre" name="uname" class="inputregister" autofocus required>
+						<label for="idnombre"><strong>Nombre</strong></label>
+						<input id="idnombre" type="text" placeholder="Introduce tu Nombre" name="uname" class="inputregister" autofocus required>
+						
 						<!-- autofocus porque lo primero es el nombre-->
-						<label><b>Apellidos</b>
-						</label>
-						<input type="text" placeholder="Introduce tus Apellidos" name="uname" class="inputregister" required>
+						<label for="idapellidos"><strong>Apellidos</strong></label>
+						<input id="idapellidos" type="text" placeholder="Introduce tus Apellidos" name="uname" class="inputregister" required>
+						
 						<!-- No se puede poner autocomplete off aqui -->
 					</fieldset>
 				</div>
 				<section>
 					<nav class="row">
 						<fieldset>
-							<label><b>Día de nacimiento</b>
-							</label>
+							<label for="diaid"><strong>Día de nacimiento</strong></label>
+							
 							<br>
-							<input type="number" name="uname" class="inputregister" required>
+							<input id="diaid" type="number" name="uname" class="inputregister" required>
 							<br>
-							<label><b>Mes de nacimiento</b>
-							</label>
+							<label for="selectregister02"><strong>Mes de nacimiento</strong> </label>
 							<select id="selectregister02">
 								<option value="en">Enero</option>
 								<option value="fe">Febrero</option>
@@ -66,37 +67,40 @@
 								<option value="nv">Noviembre</option>
 								<option value="dc">Diciembre</option>
 							</select>
-							<label><b>Año de nacimiento</b>
-							</label>
+							
+							<label for="idano"><strong>Año de nacimiento</strong></label>
+							
 							<br>
-							<input type="number" name="uname" class="inputregister" autocomplete="off" required>
+							<input id="idano" type="number" name="uname" class="inputregister" autocomplete="off" required>
 							<!-- Autocomplete off ya que este campo varía cada año-->
 						</fieldset>
 					</nav>
 				</section>
 				<div class="row">
 					<fieldset>
-						<label><b>Dirección de correo electrónico</b>
+						<label for="idemail"><strong>Dirección de correo electrónico</strong></label>
 							<br>
-						</label>
-						<input type="email" placeholder="ejemplo@gmail.com" name="uname" class="inputregister" required>
+						
+						<input id="idemail" type="email" placeholder="ejemplo@gmail.com" name="uname" class="inputregister" required>
 						<br>
-						<label><b>Contraseña</b>
-						</label>
-						<input type="password" placeholder="Introduce tu contraseña" name="uname" class="inputregister" autocomplete="off" required>
+						<label for="contra"><strong>Contraseña</strong>
+						<input type="password" placeholder="Introduce tu contraseña" name="uname" class="inputregister" autocomplete="off" id="contra" required>
 						<!-- Autocomplete off aqui para que no vea nadie la contraseña si se autocompleta-->
+						</label>
 					</fieldset>
 				</div>
 				<div class="row">
-					<label><b>Ficha de Personaje</b>
+					<label for="idfile"><strong>Ficha de Personaje</strong></label>
 						<!-- No se puede poner autocomplete aqui-->
 						<br>
-					</label>
-					<input type="file" name="uname" class="inputregister" required>
+					<input id="idfile" type="file" name="uname" class="inputregister" required>
+					
 				</div>
 				<button type="submit">REGISTRARSE</button>
+				<button type="submit" href="LasTierrasDelMundus.html">HOME</button>
 			</div>
 		</form>
+		
 	</div>
 	<footer> <span class="enlaces">
       <a href="#" id="link01">¿Quienes somos?</a> |

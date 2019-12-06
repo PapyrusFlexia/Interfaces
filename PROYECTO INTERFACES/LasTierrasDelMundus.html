@@ -10,7 +10,7 @@
 
 <body>
 	<div id="contenedor">
-		<!-- Cabecera -->
+		
 		<div id="cabecera">
 			<div id="logo">
 				<img src="ungoloz.png" id="imglogoungo" alt="ungoloz">
@@ -18,14 +18,16 @@
 				<header id="header">
 					<h1 id="ti" translate="no">LAS TIERRAS DEL MUNDUS</h1>
 					<!-- He puesto translate aqui porque es el título de la página y no debería traducirse-->
-					<h3 id="subti">El lugar de encuentro para roleros de D&D</h3>
+					<h2 id="subti">El lugar de encuentro para roleros de D&D</h2>
 				</header>
 			</div>
 			<div id="buscador">
-				<form action="#" method="post">Buscar &nbsp;
-					<input name="busqueda" type="text" autocomplete="off" />
+				<form action="#" method="post">
+					<label for="idbusqueda"> Buscar &nbsp; </label>
+					<input id="idbusqueda" name="busqueda" type="text" autocomplete="off" />
 					<!-- La página de búsqueda es una función que se usará mucha veces, con lo que si ponemos que se autocomplete te pueden salir demasiadas
-                            opciones, la cual puede abrumar al usuario -->
+							opciones, la cual puede abrumar al usuario -->
+					
 				</form>
 			</div>
 			<div class="buttons">
@@ -39,32 +41,36 @@
 					<button>CREAR FICHA DE PERSONAJE</button>
 				</div>
 			</div>
-			<div id="id01" class="modal">
+			<main id="id01" class="modal">
 				<form class="modal-content animate" method="post">
 					<div class="container">
-						<div id="loginsesion"><b>TE RECOMENDAMOS INICIAR SESIÓN PARA DISFRUTAR DE TODAS LAS FUNCIONALIDADES</b>
+						<div id="loginsesion"><strong>TE RECOMENDAMOS INICIAR SESIÓN PARA DISFRUTAR DE TODAS LAS FUNCIONALIDADES</strong>
 							<br>
 							<br>
-							<label><b>Nombre de ususario</b>
-							</label>
-							<input type="text" placeholder="Nombre de Usuario/Correo electrónico" name="uname" class="inputlogin" required>
-							<label><b>Contraseña</b>
-							</label>
-							<input type="password" placeholder="Contraseña" name="psw" class="inputlogin" autocomplete="off" required>
+							<label for="idcorreo"><strong>Nombre de ususario</strong></label>
+								<input id="idcorreo" type="text" placeholder="Nombre de Usuario/Correo electrónico" name="uname" class="inputlogin" required>
+							
+							
+							<label for="idpass"><strong>Contraseña</strong></label>
+								<input id="idpass" type="password" placeholder="Contraseña" name="psw" class="inputlogin" autocomplete="off" required>
+							
+							
 							<!-- Autocomplete off porque si se autocompleta la contraseña podría verla alguien externo-->
 							<button type="submit">LOGIN</button>
-							<input type="checkbox" checked="checked" name="remember">Recuerdame</div>
+							<label for="checkrecuerda"> Recuérdame </label>	 
+							<input id="checkrecuerda" type="checkbox" checked="checked" name="remember" value="checkvalue"></div>
+							
 					</div>
 					<div class="container">
 						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button> <span class="psw">¿Has olvidado la <a href="#"> contraseña?</a></span>
 					</div>
 				</form>
-			</div>
+			</main>
 			<script>
-				// Get the modal
+				
 				var modal = document.getElementById('id01');
 				
-				// When the user clicks anywhere outside of the modal, close it
+				
 				window.onclick = function(event) {
 				    if (event.target == modal) {
 				        modal.style.display = "none";
@@ -73,12 +79,11 @@
 			</script>
 			<div class="clear"></div>
 		</div>
-		<!-- /Cabecera -->
-		<!-- Menu principal -->
+	
 		<div id="menu"></div>
-		<!-- Lateral -->
+		
 		<div id="lateral">
-			<!-- Noticias -->
+			
 			<div id="noticias">
 				<h3><a href="https://www.youtube.com/watch?v=vFMddwkLjJw" target="_blank" >Te recomendamos: Critical Role Episodio 84, Campaña 2</a></h3>
 				<video width="250" height="240" controls>
@@ -86,32 +91,38 @@
 				</video>
 				<h3>¿Te resulta útil esta página?</h3>
 				<form>
-					<label>Sí</label>
-					<input type="radio" name="opcionutil" id="si02" value="si02" autofocus>
+						<fieldset>
+								<legend>Rating</legend>
+					<label for="si02">Sí</label>
+							<input id="idsi" type="radio" name="opcionutil" id="si02" value="si02" autofocus>
+					
+					
 					<br>
 					<!-- Hemos puesto autofocus poque queremos que la gente seleccione que les gusta nuestra página-->
-					<label>No</label>
-					<input type="radio" name="opcionutil" id="no02" value="no02">
-					<br>¿Cuánto te esta gustando esta página?
-					<input type="range" name="points" min="0" max="10" id="valor01" oninput="ageOutputId.value =valor.value">
+					<label for="no02">No</label>
+							<input type="radio" name="opcionutil" id="no02" value="no02">
+					
+					
+					<br> <label for="valor01">¿Cuánto te esta gustando esta página?</label>
+					<input type="range" name="points" min="0" max="10" id="valor01" oninput="ageOutputId.value =valor.value" value="pointsvalue">
 					<output name="ageOutputName" id="ageOutputId01">10</output>
 					<br>
 					<br>
-					<br>Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:
-					<input type="email" name="email" value="lastierrasdelmundus@gmail.com" autocomplete="off" readonly>
+					<br><label for="valor03">Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:</label>
+					<input id="valor03" type="email" name="email" value="lastierrasdelmundus@gmail.com" autocomplete="off" value="emailvalue" readonly>
 					<!-- Autocomplete off aqui porque solo puede haber un mail puesto por los desarrolladores-->
+					</fieldset>
 				</form>
 			</div>
-			<!-- /Noticias -->
-			<!-- Publicidad -->
+			
 			<div id="publicidad02">
 				<img src="anuncio.jpg" id="imgpubli02" alt="wow">
 			</div>
-			<!-- /Publicidad -->
+			
 		</div>
-		<!-- /Lateral -->
+		
 		<div id="contenido">
-			<!-- Principal -->
+			
 			<div id="principal">
 				<article class="articulo">
 					<section>
@@ -131,8 +142,7 @@
 					</section>
 				</div>
 			</div>
-			<!-- /Principal -->
-			<!-- Secundario -->
+		
 			<div id="secundario">
 				<aside>
 					<div class="flex-containersecun">
@@ -146,7 +156,7 @@
 							<img src="encuentros.png" id="imgapli03" alt="encounterbuilder">
 						</div>
 					</div>
-					<div class="stage">
+					<figure class="stage">
 						<div class="cubespinner">
 							<div class="face1">1</div>
 							<div class="face2">2</div>
@@ -155,62 +165,69 @@
 							<div class="face5">5</div>
 							<div class="face6">6</div>
 						</div>
-					</div>
+					</figure>
 				</aside>
 			</div>
 			<div id="publicmovil">
 				<img src="anuncio.jpg" id="imgpublimovil" alt="wowmovil">
 			</div>
 			<div id="lateralmovil">
-				<!-- Noticias -->
+			
 				<div id="noticiasmovil">
 					<video width="250" height="240" controls>
 						<source src="criticalrole.mp4" type="video/mp4">
 					</video>
 					<h3>¿Te resulta útil esta página?</h3>
 					<form>
-						<label>Sí</label>
-						<input type="radio" name="opcionutil" id="si01" value="si01">
+							<fieldset>
+									<legend>Rating</legend>
+						<label for="si01">Sí</label>
+								<input type="radio" name="opcionutil" id="si01" value="si01">
+						
+						
 						<br>
-						<label>No</label>
-						<input type="radio" name="opcionutil" id="no01" value="no01">
-						<br>¿Cuánto te esta gustando esta página?
-						<input type="range" name="points" min="0" max="10" id="valor02" oninput="ageOutputId.value =valor.value">
+						<label for="no01">No</label>
+								<input type="radio" name="opcionutil" id="no01" value="no01">
+						
+						
+						<br><label for="valor02">¿Cuánto te esta gustando esta página?</label>
+						<input type="range" name="points" min="0" max="10" id="valor02" oninput="ageOutputId.value =valor.value" value="rangevalue">
 						<output name="ageOutputName" id="ageOutputId02">10</output>
-						<br>Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:
-						<input type="email" name="email" value="lastierrasdelmundus@gmail.com" autocomplete="off" readonly>
+						<br><br><label for="valor04">Si te gustría añadir alguna sugerencia, puedes escribirnos en el siguiente correo:</label>
+						<input id="valor04" type="email" name="email" value="lastierrasdelmundus@gmail.com" autocomplete="off" value="emailvalue" readonly>
 						<!-- Autocomplete off aqui porque solo puede haber un mail puesto por los desarrolladores-->
+						</fieldset>
 					</form>
 				</div>
-				<!-- /Noticias -->
-				<!-- Publicidad -->
-				<div id="publicidad01">
+				
+				<figcaption id="publicidad01">
 					<img src="anuncio.jpg" id="imgpubli01" alt="wow">
-				</div>
-				<!-- /Publicidad -->
+				</figcaption>
+				
 			</div>
-			<!-- /Secundario -->
+			
 		</div>
-		<!-- /Contenido -->
+		
 		<div class="clear"></div>
-		<!-- Pie -->
-		<div id="pie">
-			<footer> <span class="enlaces">
+		
+		<footer id="pie">
+			<summary> <span class="enlaces">
                             <a href="#" id="link01">¿Quienes somos?</a> |
                             <a href="#" id="link02">Blog</a> |
-                            <a href="#" id="link03">Trabajo</a> |
+                            <a href="#" id="link03">FAQ</a> |
                             <a href="#" id="link04">Noticias</a> |
-                            <a href="#" id="link05">Ayuda</a> |
+							<a href="#" id="link05">Ayuda</a> |
+							<a href="#" id="link06">Contacto</a> |
                         </span>
 				<span class="copyright">
                           2019 &copy; Copyright ADA ITS
                         </span>
-			</footer>
+					</summary>
 			<div class="clear"></div>
-		</div>
-		<!-- /Pie -->
+		</footer>
+	
 	</div>
-	<!-- /Contenedor -->
+
 </body>
 
 </html>

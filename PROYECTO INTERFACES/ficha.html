@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 	<title id="titulo">Crear Ficha de Personaje</title>
@@ -9,38 +9,59 @@
 </head>
 
 <body>
+
+		<div class="buttons">
+				<div class="buttoncrear">
+					<button onclick="document.getElementById('id01').style.display='block'">CREAR PERSONAJE</button>
+				</div>
+				<div class="child buttonindex" onclick="document.location=this.id+'file:///C:/Users/pablo/OneDrive/Escritorio/PROYECTO%20INTERFACES/register.html';return false;">
+					<button>REGISTRARSE</button>
+				</div>
+				<div class="child buttonindex" onclick="document.location=this.id+'file:///C:/Users/pablo/OneDrive/Escritorio/PROYECTO%20INTERFACES/LasTierrasDelMundus.html';return false;" translate="no">
+					<!-- He usado translate aqui ya que home ya esta traducido al inglés -->
+					<button>HOME</button>
+				</div>
+			</div>
 	<form class="charsheet">
 		<div id="03">
 			<header>
 				<section class="charname">
-					<label>Nombre del Personaje</label>
-					<input name="charname" placeholder="Puidgemont" />
+					<label for="idnombre">Nombre del Personaje </label>
+					<input id="idnombre" name="charname" placeholder="Puidgemont" autocomplete="off" autofocus />
+					
+					<!-- autocomplete off ya que el nombre siempre suele ser distinto y no quiero que se autocompleta y autofocus porque primero se empieza por el nombre -->
 				</section>
 				<section class="misc">
 					<ul>
 						<li>
-							<label>Nivel y Clase</label>
-							<input name="classlevel" placeholder="Ladrón 5" />
+							<label for="idclass">Nivel y Clase</label>
+							<input id="idclass" name="classlevel" placeholder="Ladrón 5" />
+							
 						</li>
 						<li>
-							<label>Trasfondo</label>
-							<input name="background" placeholder="Acólito" />
+							<label for="idback">Trasfondo</label>
+							<input id="idback" name="background" placeholder="Acólito" />
+							
 						</li>
 						<li>
-							<label>Nombre del Jugador</label>
-							<input name="playername" placeholder="Mariano Rajoy">
+							<label for="idjugador">Nombre del Jugador</label>
+							<input id="idjugador" name="playername" placeholder="Mariano Rajoy">
+							
 						</li>
 						<li>
-							<label>Raza</label>
-							<input name="race" placeholder="Humano" />
+							<label for="idraza">Raza</label>
+							<input id="idraza" name="race" placeholder="Humano" />
+							
 						</li>
 						<li>
-							<label>Alineamiento</label>
-							<input name="alignment" placeholder="Legal Bueno" />
+							<label for="idalig">Alineamiento</label>
+							<input id="idalig" name="alignment" placeholder="Legal Bueno" />
+							
 						</li>
 						<li>
-							<label>Puntos de Experiencia</label>
-							<input name="experiencepoints" placeholder="3240" />
+							<label for="idexp">Puntos de Experiencia </label>
+							<input id="idexp" name="experiencepoints" placeholder="3240" />
+							
 						</li>
 					</ul>
 				</section>
@@ -52,56 +73,76 @@
 							<ul>
 								<li>
 									<div class="score">
-										<label>Fuerza</label>
-										<input name="Strengthscore" placeholder="10" type="number" />
+										<label for="idfue">Fuerza</label>
+										<input id="idfue" name="Strengthscore" placeholder="10" type="number" />
+										
 									</div>
 									<div class="modifier">
-										<input name="Strengthmod" placeholder="+0" type="number" />
+										<label for="idmodfue">
+										<input if="idmodfue" name="Strengthmod" placeholder="+0" type="number" />
+										</label>
+										
 									</div>
 								</li>
 								<li>
 									<div class="score">
-										<label>Destreza</label>
-										<input name="Dexterityscore" placeholder="10" type="number" />
+										<label for="iddex">Destreza</label>
+										<input id="iddex" name="Dexterityscore" placeholder="10" type="number" />
+										
 									</div>
 									<div class="modifier">
-										<input name="Dexteritymod" placeholder="+0" type="number" />
+										<label for="idmoddex">
+										<input id="idmoddex" name="Dexteritymod" placeholder="+0" type="number" />
+										</label>
+										
 									</div>
 								</li>
 								<li>
 									<div class="score">
-										<label>Constitución</label>
-										<input name="Constitutionscore" placeholder="10" type="number" />
+										<label for="idcon">Constitución</label>
+										<input id="idcon" name="Constitutionscore" placeholder="10" type="number" />
+										
 									</div>
 									<div class="modifier">
-										<input name="Constitutionmod" placeholder="+0" type="number" />
+										<label for="idmodcon">
+										<input id="idmodcon" name="Constitutionmod" placeholder="+0" type="number" />
+										</label>
 									</div>
 								</li>
 								<li>
 									<div class="score">
-										<label>Sabiduría</label>
-										<input name="Wisdomscore" placeholder="10" type="number" />
+										<label for="idsab">Sabiduría</label>
+										<input id="idsab" name="Wisdomscore" placeholder="10" type="number" />
+										
 									</div>
 									<div class="modifier">
-										<input name="Wisdommod" placeholder="+0" type="number" />
+										<label for="idmodsab">
+										<input id="idmodsab" name="Wisdommod" placeholder="+0" type="number" />
+										</label>
 									</div>
 								</li>
 								<li>
 									<div class="score">
-										<label>Inteligencia</label>
-										<input name="Intelligencescore" placeholder="10" type="number" />
+										<label for="idint">Inteligencia</label>
+										<input id="idint" name="Intelligencescore" placeholder="10" type="number" />
+										
 									</div>
 									<div class="modifier">
-										<input name="Intelligencemod" placeholder="+0" type="number" />
+										<label for="idmodint">
+										<input id="idmodint" name="Intelligencemod" placeholder="+0" type="number" />
+										</label>
 									</div>
 								</li>
 								<li>
 									<div class="score">
-										<label>Carisma</label>
-										<input name="Charismascore" placeholder="10" type="number" />
+										<label for="idcar">Carisma</label>
+										<input id="idcar" name="Charismascore" placeholder="10" type="number" />
+										
 									</div>
 									<div class="modifier">
-										<input name="Charismamod" placeholder="+0" type="number" />
+										<label for="idmodcar">
+										<input id="idmodcar" name="Charismamod" placeholder="+0" type="number" />
+										</label>
 									</div>
 								</li>
 							</ul>
@@ -109,15 +150,15 @@
 						<div class="attr-applications">
 							<div class="inspiration box">
 								<div class="label-container">
-									<label>Inspiración</label>
+									<label for="idinspi">Inspiración</label>
 								</div>
-								<input name="inspiration" type="checkbox" />
+								<input id="idinspi" name="inspiration" type="checkbox" />
 							</div>
 							<div class="proficiencybonus box">
 								<div class="label-container">
-									<label>Competencia</label>
+									<label for="idprof">Competencia</label>
 								</div>
-								<input name="proficiencybonus" placeholder="+2" />
+								<input id="idprof" name="proficiencybonus" placeholder="+2" />
 							</div>
 							<div class="saves list-section box">
 								<ul>
@@ -464,17 +505,7 @@
 			</main>
 		</div>
 	</form>
-	<div class="buttons">
-		<div class="buttoncrear">
-			<button onclick="document.getElementById('id01').style.display='block'">CREAR PERSONAJE</button>
-		</div>
-		<div class="child buttonindex" onclick="document.location=this.id+'file:///C:/Users/pablo/OneDrive/Escritorio/PROYECTO%20INTERFACES/register.html';return false;">
-			<button>REGISTRARSE</button>
-		</div>
-		<div class="child buttonindex" onclick="document.location=this.id+'file:///C:/Users/pablo/OneDrive/Escritorio/PROYECTO%20INTERFACES/LasTierrasDelMundus.html';return false;">
-			<button>HISTORIA</button>
-		</div>
-	</div>
+	
 </body>
 
 </html>
