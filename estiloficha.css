@@ -860,6 +860,57 @@ form.charsheet main section.features div textarea {
 	padding: 5px;
 	height: 43em;
 }
+#none02,
+#none03,
+#none04,
+#none05,
+#none06,
+#none07,
+#none08,
+#none09,
+#none10,
+#none11,
+#none12,
+#none13,
+#none14,
+#none15,
+#none16,
+#none17,
+#none18,
+#none19,
+#none20,
+#none21,
+#none22,
+#none23,
+#none24,
+#none25,
+#none26,
+#none27,
+#none28,
+#none29,
+#none30,
+#none31,
+#none32,
+#none33,
+#none34,
+#none35,
+#none36,
+#none37,
+#none38,
+#none39,
+#none40,
+#none41,
+#none42,
+#none43,
+#none44,
+#none45,
+#none46,
+#none47,
+#none49,
+#none50,
+#none51 {
+	display: none;
+}
 @media screen and (max-width: 800px) {
 	* {
 		-webkit-box-flex: 100%;
@@ -869,7 +920,6 @@ form.charsheet main section.features div textarea {
 	}
 	form.charsheet {
 		position: relative;
-		/* */
 		padding: 0;
 		margin: 0;
 		top: 0;

@@ -2,7 +2,6 @@ html {
 	color: lightgrey;
 	background-color: #696969;
 	font: normal 9px
-	/*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
 }
 ul,
 ul li {
@@ -24,8 +23,6 @@ form {
 img {
 	border: none;
 }
-/*-- Layout ----------------------------------------------------------*/
-
 #contenedor {
 	width: 90%;
 	max-width: 900px;
@@ -74,8 +71,6 @@ img {
 	justify-content: center;
 	clear: both;
 }
-/*-- Cabecera --------------------------------------------------------*/
-
 #cabecera #logo {
 	float: left;
 }
@@ -114,60 +109,35 @@ img {
 #cabecera #buscador {
 	float: right;
 }
-/*-- Menu ------------------------------------------------------------*/
-
 #menu #menu_principal {
 	display: inline;
 	float: left;
 }
-/*#historia:link #herramientas:link #login:link {
+a:link {
 	color: lightblue;
 }
-#historia:visited #herramientas:visited #login:visited {
-	color: pink;
+a:visited {
+	color: rgb(105, 44, 202);
 }
-#historia:hover #herramientas:hover #login:hover {
+a:hover {
 	color: red;
 }
-#historia:active #herramientas:active #login:active {
-	color: yellow;
-}*/
-
-#link:link #link:link #link:link {
-	color: lightblue;
-}
-#link:visited #link:visited #link:visited {
-	color: pink;
-}
-#link:hover #link:hover #link:hover {
-	color: red;
-}
-#link:active #link:active #link:active {
+a:active {
 	color: yellow;
 }
 #menu {
 	margin-left: -10%;
 }
-/* He usado translate aqui porque queria desplazar el menú un poco hacia arriba, mase cerca del logo */
-
-/*-- Seccion Principal -----------------------------------------------*/
-
 #contenido #principal .articulo img {
 	width: 100px;
 	float: left;
 }
-/*-- Pie de pagina ---------------------------------------------------*/
-
 #pie .enlaces {
 	float: left;
 }
 #pie .copyright {
 	float: right;
 }
-/* === IMPORTANTE ============================
-    A partir de aqui incluye tu css
-============================================= */
-
 #cabecera,
 #menu,
 #lateral,
@@ -387,8 +357,6 @@ input[type=password] {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-/* Set a style for all buttons */
-
 button {
 	background-color: rgb(21, 108, 138);
 	color: white;
@@ -410,21 +378,11 @@ button:hover {
 .buttons {
 	text-align: center;
 }
-/*#herrabutton{
-  float: left; 
-  margin-left: 80%;  
-  width:80px;
-}*/
-
-/* Extra styles for the cancel button */
-
 .cancelbtn {
 	width: auto;
 	padding: 10px 18px;
 	background-color: #f44336;
 }
-/* Center the image and position the close button */
-
 img.avatar {
 	width: 40%;
 	border-radius: 50%;
@@ -433,14 +391,12 @@ img.avatar {
 	color: black;
 	background-color: lightgrey;
 	font: normal 9px;
-	/*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
 	padding: 16px;
 }
 .containerregister {
 	color: black;
 	background-color: lightgrey;
 	font: normal 9px;
-	/*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
 	padding: 16px;
 }
 #creacuenta {
@@ -467,30 +423,19 @@ span.psw {
 	float: right;
 	padding-top: 16px;
 }
-/* The Modal (background) */
-
 .modal {
 	color: lightgrey;
 	background-color: #696969;
 	font: normal 9px;
-	/*"Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;*/
-	/* Hidden by default */
 	position: fixed;
-	/* Stay in place */
 	z-index: 1;
-	/* Sit on top */
 	left: 0;
 	top: 0;
 	width: 100%;
-	/* Full width */
 	height: 100%;
-	/* Full height */
 	overflow: auto;
-	/* Enable scroll if needed */
 	background-color: rgb(0, 0, 0);
-	/* Fallback color */
 	background-color: rgba(0, 0, 0, 0.4);
-	/* Black w/ opacity */
 	padding-top: 60px;
 }
 #id02 {
@@ -542,13 +487,9 @@ fieldset {
 .modal-content {
 	background-color: #fefefe;
 	margin: 5% auto 15% auto;
-	/* 5% from the top, 15% from the bottom and centered */
 	border: 1px solid #888;
 	width: 80%;
-	/* Could be more or less, depending on screen size */
 }
-/* The Close Button (x) */
-
 .close {
 	position: absolute;
 	right: 25px;
@@ -570,8 +511,6 @@ fieldset {
 		-webkit-transform: rotateY(-360deg);
 	}
 }
-/* all other browsers */
-
 @keyframes spinner {
 	from {
 		-ms-transform: rotateY(0deg);
@@ -614,11 +553,12 @@ fieldset {
 	-webkit-animation-play-state: paused;
 	animation-play-state: paused;
 }
-/* Add Zoom Animation */
-
 .animate {
 	-webkit-animation: animatezoom 0.6s;
 	animation: animatezoom 0.6s
+}
+#none01 {
+	display: none;
 }
 @-webkit-keyframes animatezoom {
 	from {
@@ -638,8 +578,6 @@ fieldset {
 		transform: scale(1)
 	}
 }
-/* Change styles for span and cancel button on extra small screens */
-
 @media screen and (max-width: 300px) {
 	span.psw {
 		display: block;
@@ -805,11 +743,10 @@ fieldset {
 		margin-left: -30%;
 	}
 	#secundario {
-			margin: auto;
-			-webkit-transform: translateX(20px);
-			-ms-transform: translateX(20px);
-			transform: translateX(20px);
-		
+		margin: auto;
+		-webkit-transform: translateX(20px);
+		-ms-transform: translateX(20px);
+		transform: translateX(20px);
 	}
 	.articulo {
 		font-size: 35px;
@@ -819,10 +756,9 @@ fieldset {
 		margin-right: 40%;
 	}
 	#conjuros {
-		width:200px;
+		width: 200px;
 		margin-left: 15%;
 	}
-	
 	#nomovil {
 		margin-top: 10%;
 		font-size: 35px;
@@ -850,15 +786,12 @@ fieldset {
 		margin-left: 15%;
 	}
 	#noticiasmovil {
-		
 		display: inline;
 	}
 	#lateralmovil {
 		display: inline;
 		font-size: 35px;
 		margin-left: 10%;
-		/*width: 10%;
-		margin-left: 30%;*/
 	}
 	#publimovil {
 		margin-top: 30%;
@@ -871,7 +804,6 @@ fieldset {
 	}
 	.container {
 		position: relative;
-		/* */
 		padding: 0;
 		margin: 0;
 		top: 0;
@@ -881,7 +813,6 @@ fieldset {
 	}
 	.containerregister {
 		position: fixed;
-		/* */
 		padding: 0;
 		margin: 0;
 		top: 0;
