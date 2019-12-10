@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title id="titulo">Crear Ficha de Personaje</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estiloficha.css" title="style" id="link" />
+</head>
+
+<body>
+	<div class="buttons">
+		<div class="buttoncrear">
+			<button onclick="document.getElementById('id01').style.display='block'">CREAR PERSONAJE</button>
+		</div>
+		<div class="child buttonindex">
+			<button onclick="location.href='register.html'">REGISTRARSE</button>
+		</div>
+		<div class="child buttonindex" translate="no">
+			<!-- He usado translate aqui ya que home ya esta traducido al inglés -->
+			<button onclick="location.href='LasTierrasDelMundus.html'">HOME</button>
+		</div>
+	</div>
+	<form class="charsheet">
+		<div id="03">
+			<header>
+				<section class="charname">
+					<label for="idnombre">Nombre del Personaje</label>
+					<input id="idnombre" name="charname" placeholder="Puidgemont" autocomplete="off" autofocus />
+					<!-- autocomplete off ya que el nombre siempre suele ser distinto y no quiero que se autocompleta y autofocus porque primero se empieza por el nombre -->
+				</section>
+				<section class="misc">
+					<ul>
+						<li>
+							<label for="idclass">Nivel y Clase</label>
+							<input id="idclass" name="classlevel" placeholder="Ladrón 5" />
+						</li>
+						<li>
+							<label for="idback">Trasfondo</label>
+							<input id="idback" name="background" placeholder="Acólito" />
+						</li>
+						<li>
+							<label for="idjugador">Nombre del Jugador</label>
+							<input id="idjugador" name="playername" placeholder="Mariano Rajoy">
+						</li>
+						<li>
+							<label for="idraza">Raza</label>
+							<input id="idraza" name="race" placeholder="Humano" />
+						</li>
+						<li>
+							<label for="idalig">Alineamiento</label>
+							<input id="idalig" name="alignment" placeholder="Legal Bueno" />
+						</li>
+						<li>
+							<label for="idexp">Puntos de Experiencia</label>
+							<input id="idexp" name="experiencepoints" placeholder="3240" />
+						</li>
+					</ul>
+				</section>
+			</header>
+			<main>
+				<section>
+					<section class="attributes">
+						<div class="scores">
+							<ul>
+								<li>
+									<div class="score">
+										<label for="idfue">Fuerza</label>
+										<input id="idfue" name="Strengthscore" placeholder="10" type="number" />
+									</div>
+									<div class="modifier">
+										<label for="idmodfue" id="none19">.</label>
+										<input id="idmodfue" name="Strengthmod" placeholder="+0" type="number" />
+									</div>
+								</li>
+								<li>
+									<div class="score">
+										<label for="iddex">Destreza</label>
+										<input id="iddex" name="Dexterityscore" placeholder="10" type="number" />
+									</div>
+									<div class="modifier">
+										<label for="idmoddex" id="none20">.</label>
+										<input id="idmoddex" name="Dexteritymod" placeholder="+0" type="number" />
+									</div>
+								</li>
+								<li>
+									<div class="score">
+										<label for="idcon">Constitución</label>
+										<input id="idcon" name="Constitutionscore" placeholder="10" type="number" />
+									</div>
+									<div class="modifier">
+										<label for="idmodcon" id="none21">.</label>
+										<input id="idmodcon" name="Constitutionmod" placeholder="+0" type="number" />
+									</div>
+								</li>
+								<li>
+									<div class="score">
+										<label for="idsab">Sabiduría</label>
+										<input id="idsab" name="Wisdomscore" placeholder="10" type="number" />
+									</div>
+									<div class="modifier">
+										<label for="idmodsab" id="none22">.</label>
+										<input id="idmodsab" name="Wisdommod" placeholder="+0" type="number" />
+									</div>
+								</li>
+								<li>
+									<div class="score">
+										<label for="idint">Inteligencia</label>
+										<input id="idint" name="Intelligencescore" placeholder="10" type="number" />
+									</div>
+									<div class="modifier">
+										<label for="idmodint" id="none23">.</label>
+										<input id="idmodint" name="Intelligencemod" placeholder="+0" type="number" />
+									</div>
+								</li>
+								<li>
+									<div class="score">
+										<label for="idcar">Carisma</label>
+										<input id="idcar" name="Charismascore" placeholder="10" type="number" />
+									</div>
+									<div class="modifier">
+										<label for="idmodcar" id="none24">.</label>
+										<input id="idmodcar" name="Charismamod" placeholder="+0" type="number" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="attr-applications">
+							<div class="inspiration box">
+								<div class="label-container">
+									<label for="idinspi">Inspiración</label>
+								</div>
+								<input id="idinspi" name="inspiration" type="checkbox" />
+							</div>
+							<div class="proficiencybonus box">
+								<div class="label-container">
+									<label for="idprof">Competencia</label>
+								</div>
+								<input id="idprof" name="proficiencybonus" placeholder="+2" />
+							</div>
+							<div class="saves list-section box">
+								<ul>
+									<li>
+										<label for="idfuesav">Fuerza</label>
+										<input id="idfuesav" name="Strength-save" placeholder="+0" type="text" />
+										<label for="idfuecheck" id="none25">.</label>
+										<input id="idfuecheck" name="Strength-save-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="iddessav">Destreza</label>
+										<input id="iddessav" name="Dexterity-save" placeholder="+0" type="text" />
+										<label for="iddescheck" id="none26">.</label>
+										<input id="iddescheck" name="Dexterity-save-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="idconsav">Constitución</label>
+										<input id="idconsav" name="Constitution-save" placeholder="+0" type="text" />
+										<label for="idconcheck" id="none27">.</label>
+										<input id="idconcheck" name="Constitution-save-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="idsabsav">Sabiduría</label>
+										<input id="idsabsav" name="Wisdom-save" placeholder="+0" type="text" />
+										<label for="idsabcheck" id="none28">.</label>
+										<input id="idsabcheck" name="Wisdom-save-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="idintsav">Inteligencia</label>
+										<input id="idintsav" name="Intelligence-save" placeholder="+0" type="text" />
+										<label for="idintcheck" id="none29">.</label>
+										<input id="idintcheck" name="Intelligence-save-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="idcarsav">Carisma</label>
+										<input id="idcarsav" name="Charisma-save" placeholder="+0" type="text" />
+										<label for="idcarcheck" id="none30">.</label>
+										<input id="idcarcheck" name="Charisma-save-prof" type="checkbox" />
+									</li>
+								</ul>
+								<div class="label">Tiradas de Salavación</div>
+							</div>
+							<div class="skills list-section box">
+								<ul>
+									<li>
+										<label for="acro">Acrobacias <span class="skill">(Des)</span>
+										</label>
+										<input id="acro" name="Acrobatics" placeholder="+0" type="text" />
+										<label for="acroprof" id="none02">.</label>
+										<input id="acroprof" name="Acrobatics-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="anim">Trato con los Animales<span class="skill"> (Sab)</span>
+										</label>
+										<input id="anim" name="Animal Handling" placeholder="+0" type="text" />
+										<label for="animprof" id="none31">.</label>
+										<input id="animprof" name="Animal Handling-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="arca">Arcano <span class="skill">(Int)</span>
+										</label>
+										<input id="arca" name="Arcana" placeholder="+0" type="text" />
+										<label for="arcaprof" id="none03">.</label>
+										<input id="arcaprof" name="Arcana-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="atle">Atletismo <span class="skill">(Fue)</span>
+										</label>
+										<input id="atle" name="Athletics" placeholder="+0" type="text" />
+										<label for="atleprof" id="none04">.</label>
+										<input id="atleprof" name="Athletics-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="enga">Engaño <span class="skill">(Car)</span>
+										</label>
+										<input id="enga" name="Deception" placeholder="+0" type="text" />
+										<label for="decepprof" id="none05">.</label>
+										<input id="decepprof" name="Deception-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="his">Historia <span class="skill">(Int)</span>
+										</label>
+										<input id="his" name="History" placeholder="+0" type="text" />
+										<label for="histoprof" id="none06">.</label>
+										<input id="histoprof" name="History-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="bus">Búsqueda <span class="skill">(Sab)</span>
+										</label>
+										<input id="bus" name="Insight" placeholder="+0" type="text" />
+										<label for="insiprof" id="none07">.</label>
+										<input id="insiprof" name="Insight-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="inti">Intimidación <span class="skill">(Car)</span>
+										</label>
+										<input id="inti" name="Intimidation" placeholder="+0" type="text" />
+										<label for="intiprof" id="none08">.</label>
+										<input id="intiprof" name="Intimidation-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="inves">Investigación <span class="skill">(Int)</span>
+										</label>
+										<input id="inves" name="Investigation" placeholder="+0" type="text" />
+										<label for="inveprof" id="none09">.</label>
+										<input id="inveprof" name="Investigation-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="medic">Medicina <span class="skill">(Sab)</span>
+										</label>
+										<input id="medic" name="Medicine" placeholder="+0" type="text" />
+										<label for="mediprof" id="none10">.</label>
+										<input id="mediprof" name="Medicine-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="natu">Naturaleza <span class="skill">(Int)</span>
+										</label>
+										<input id="natu" name="Nature" placeholder="+0" type="text" />
+										<label for="natuprof" id="none11">.</label>
+										<input id="natuprof" name="Nature-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="perce">Percepción <span class="skill">(Sab)</span>
+										</label>
+										<input id="perce" name="Perception" placeholder="+0" type="text" />
+										<label for="perceprof" id="none12">.</label>
+										<input id="perceprof" name="Perception-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="actu">Actuación <span class="skill">(Car)</span>
+										</label>
+										<input id="actu" name="Performance" placeholder="+0" type="text" />
+										<label for="perfoprof" id="none13">.</label>
+										<input id="perfoprof" name="Performance-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="persu">Persuasión <span class="skill">(Car)</span>
+										</label>
+										<input id="persu" name="Persuasion" placeholder="+0" type="text" />
+										<label for="persuprof" id="none14">.</label>
+										<input id="persuprof" name="Persuasion-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="reli">Religión <span class="skill">(Int)</span>
+										</label>
+										<input id="reli" name="Religion" placeholder="+0" type="text" />
+										<label for="reliprof" id="none15">.</label>
+										<input id="reliprof" name="Religion-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="rob">Robo <span class="skill">(Dec)</span>
+										</label>
+										<input id="rob" name="Sleight of Hand" placeholder="+0" type="text" />
+										<label for="robprof" id="none16">.</label>
+										<input id="robprof" name="Sleight of Hand-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="sigil">Sigilo <span class="skill">(Dec)</span>
+										</label>
+										<input id="sigil" name="Stealth" placeholder="+0" type="text" />
+										<label for="steprof" id="none17">.</label>
+										<input id="steprof" name="Stealth-prof" type="checkbox" />
+									</li>
+									<li>
+										<label for="super">Supervivencia <span class="skill">(Sab)</span>
+										</label>
+										<input id="super" name="Survival" placeholder="+0" type="text" />
+										<label for="surviprof" id="none18">.</label>
+										<input id="surviprof" name="Survival-prof" type="checkbox" />
+									</li>
+								</ul>
+								<div class="label">Habilidades</div>
+							</div>
+						</div>
+					</section>
+					<div class="passive-perception box">
+						<div class="label-container">
+							<label>Percepción</label>
+						</div>
+						<label for="pasiv" id="none32">.</label>
+						<input id="pasiv" name="passiveperception" placeholder="10" />
+					</div>
+					<div class="otherprofs box textblock">
+						<label for="text1">Otras competencias e idiomas</label>
+						<textarea id="text1" name="otherprofs"></textarea>
+					</div>
+				</section>
+				<section>
+					<section class="combat">
+						<div class="armorclass">
+							<div>
+								<label for="clasear">Clase de Armadura</label>
+								<input id="clasear" name="ac" placeholder="10" type="number" />
+							</div>
+						</div>
+						<div class="initiative">
+							<div>
+								<label for="inic">Iniciativa</label>
+								<input id="inic" name="initiative" placeholder="+0" type="number" />
+							</div>
+						</div>
+						<div class="speed">
+							<div>
+								<label for="velo">Velocidad</label>
+								<input id="velo" name="speed" placeholder="30" type="number" />
+							</div>
+						</div>
+						<div class="hp">
+							<div class="regular">
+								<div class="max">
+									<label for="pgmax">Puntos de Golpe Máximos</label>
+									<input id="pgmax" name="maxhp" placeholder="10" type="text" />
+								</div>
+								<div class="current">
+									<label for="pg">Puntos de Golpe Actuales</label>
+									<input id="pg" name="currenthp" type="text" />
+								</div>
+							</div>
+							<div class="temporary">
+								<label for="pgtemp">Puntos de Golpe Temporales</label>
+								<input id="pgtemp" name="temphp" type="text" />
+							</div>
+						</div>
+						<div class="hitdice">
+							<div>
+								<div class="total">
+									<label for="tot">Total</label>
+									<input id="tot" name="totalhd" placeholder="2d10" type="text" />
+								</div>
+								<div class="remaining">
+									<label for="hd">Dados de golpe</label>
+									<input id="hd" name="remaininghd" type="text" />
+								</div>
+							</div>
+						</div>
+						<div class="deathsaves">
+							<div>
+								<div class="label">
+									<label>Salvaciones de Muerte</label>
+								</div>
+								<div class="marks">
+									<div class="deathsuccesses">
+										<label>Triunfos</label>
+										<div class="bubbles">
+											<label for="ds1" id="none33">.</label>
+											<label for="ds2" id="none34">.</label>
+											<label for="ds3" id="none35">.</label>
+											<input id="ds1" name="deathsuccess1" type="checkbox" />
+											<input id="ds2" name="deathsuccess2" type="checkbox" />
+											<input id="ds3" name="deathsuccess3" type="checkbox" />
+										</div>
+									</div>
+									<div class="deathfails">
+										<label>Derrotas</label>
+										<div class="bubbles">
+											<label for="df1" id="none36">.</label>
+											<label for="df2" id="none37">.</label>
+											<label for="df3" id="none38">.</label>
+											<input id="df1" name="deathfail1" type="checkbox" />
+											<input id="df2" name="deathfail2" type="checkbox" />
+											<input id="df3" name="deathfail3" type="checkbox" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="attacksandspellcasting">
+						<div>
+							<label>Ataque y hechizos</label>
+							<table>
+								<thead>
+									<tr>
+										<td>Nombre</td>
+										<td>Bonus de Ataque</td>
+										<td>Daño/Tipo</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label for="ataque1" id="none39">.</label>
+											<input id="ataque1" name="atkname1" type="text" />
+										</td>
+										<td>
+											<label for="ataquebonus1" id="none40">.</label>
+											<input id="ataquebonus1" name="atkbonus1" type="text" />
+										</td>
+										<td>
+											<label for="ataquedmg1" id="none41">.</label>
+											<input id="ataquedmg1" name="ataquedamage1" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="ataque2" id="none42">.</label>
+											<input id="ataque2" name="atkname2" type="text" />
+										</td>
+										<td>
+											<label for="ataquebonus2" id="none43">.</label>
+											<input id="ataquebonus2" name="atkbonus2" type="text" />
+										</td>
+										<td>
+											<label for="ataquedmg2" id="none44">.</label>
+											<input id="ataquedmg2" name="atkdamage2" type="text" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="ataque3" id="none45">.</label>
+											<input id="ataque3" name="atkname2" type="text" />
+										</td>
+										<td>
+											<label for="ataquebonus3" id="none46">.</label>
+											<input id="ataquebonus3" name="atkbonus2" type="text" />
+										</td>
+										<td>
+											<label for="ataquedmg3" id="none47">.</label>
+											<input id="ataquedmg3" name="atkdamage2" type="text" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<label for="text2" id="none49">.</label>
+							<textarea id="text2"></textarea>
+						</div>
+					</section>
+					<section class="equipment">
+						<div>
+							<label>Equipamiento</label>
+							<div class="money">
+								<ul>
+									<li>
+										<label for="idcp">cp</label>
+										<input id="idcp" name="cp" type="number" />
+									</li>
+									<li>
+										<label for="idsp">sp</label>
+										<input id="idsp" name="sp" type="number" />
+									</li>
+									<li>
+										<label for="idep">ep</label>
+										<input id="idep" name="ep" type="number" />
+									</li>
+									<li>
+										<label for="idgp">gp</label>
+										<input id="idgp" name="gp" type="number" />
+									</li>
+									<li>
+										<label for="idpp">pp</label>
+										<input id="idpp" name="pp" type="number" />
+									</li>
+								</ul>
+							</div>
+							<label for="text3" id="none50">.</label>
+							<textarea id="text3" placeholder="Escribe aquí tu equipamiento"></textarea>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section class="flavor">
+						<div class="personality">
+							<label for="text4">Personalidad</label>
+							<textarea id="text4" name="personality"></textarea>
+						</div>
+						<div class="ideals">
+							<label for="text5">Ideales</label>
+							<textarea id="text5" name="ideals"></textarea>
+						</div>
+						<div class="bonds">
+							<label for="text6">Lazos</label>
+							<textarea id="text6" name="bonds"></textarea>
+						</div>
+						<div class="flaws">
+							<label for="text7">Puntos Débiles</label>
+							<textarea id="text7" name="flaws"></textarea>
+						</div>
+					</section>
+					<section class="features">
+						<div>
+							<label>Características y Rasgos</label>
+							<label for="text8" id="none51">.</label>
+							<textarea id="text8" name="features"></textarea>
+						</div>
+					</section>
+				</section>
+			</main>
+		</div>
+	</form>
+</body>
+
+</html>
